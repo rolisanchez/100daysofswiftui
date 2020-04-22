@@ -29,20 +29,20 @@ struct ContentView: View {
                     Text("Tap the flag of")
                         .foregroundColor(.white)
                     Text(countries[correctAnswer])
-                        .foregroundColor(.white)
-                        .font(.largeTitle)
                         .fontWeight(.black)
+                        .titleStyle()
                 }
                 
                 ForEach(0 ..< 3) { number in
                     Button(action: {
                         self.flagTapped(number)
                     }) {
-                        Image(self.countries[number])
-                            .renderingMode(.original)
-                            .clipShape(Capsule())
-                            .overlay(Capsule().stroke(Color.black, lineWidth: 1))
-                            .shadow(color: .black, radius: 2)
+                        FlagImage(country: self.countries[number])
+//                        Image(self.countries[number])
+//                            .renderingMode(.original)
+//                            .clipShape(Capsule())
+//                            .overlay(Capsule().stroke(Color.black, lineWidth: 1))
+//                            .shadow(color: .black, radius: 2)
 
                     }
                 }

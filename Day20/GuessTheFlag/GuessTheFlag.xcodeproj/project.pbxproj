@@ -13,6 +13,8 @@
 		DBD46D53244C556F00AEC186 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD46D52244C556F00AEC186 /* Assets.xcassets */; };
 		DBD46D56244C556F00AEC186 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD46D55244C556F00AEC186 /* Preview Assets.xcassets */; };
 		DBD46D59244C556F00AEC186 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD46D57244C556F00AEC186 /* LaunchScreen.storyboard */; };
+		DBFE28EA2450792C00B4D198 /* TitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE28E92450792C00B4D198 /* TitleModifier.swift */; };
+		DBFE28EC24507AD000B4D198 /* FlagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE28EB24507AD000B4D198 /* FlagImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		DBD46D55244C556F00AEC186 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBD46D58244C556F00AEC186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBD46D5A244C556F00AEC186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBFE28E92450792C00B4D198 /* TitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleModifier.swift; sourceTree = "<group>"; };
+		DBFE28EB24507AD000B4D198 /* FlagImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				DBD46D4C244C556F00AEC186 /* AppDelegate.swift */,
 				DBD46D4E244C556F00AEC186 /* SceneDelegate.swift */,
 				DBD46D50244C556F00AEC186 /* ContentView.swift */,
+				DBFE28EB24507AD000B4D198 /* FlagImage.swift */,
+				DBFE28E92450792C00B4D198 /* TitleModifier.swift */,
 				DBD46D52244C556F00AEC186 /* Assets.xcassets */,
 				DBD46D57244C556F00AEC186 /* LaunchScreen.storyboard */,
 				DBD46D5A244C556F00AEC186 /* Info.plist */,
@@ -146,9 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBFE28EC24507AD000B4D198 /* FlagImage.swift in Sources */,
 				DBD46D4D244C556F00AEC186 /* AppDelegate.swift in Sources */,
 				DBD46D4F244C556F00AEC186 /* SceneDelegate.swift in Sources */,
 				DBD46D51244C556F00AEC186 /* ContentView.swift in Sources */,
+				DBFE28EA2450792C00B4D198 /* TitleModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
