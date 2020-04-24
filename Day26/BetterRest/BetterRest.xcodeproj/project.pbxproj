@@ -13,6 +13,7 @@
 		DBFE29202452B1BB00B4D198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFE291F2452B1BB00B4D198 /* Assets.xcassets */; };
 		DBFE29232452B1BB00B4D198 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFE29222452B1BB00B4D198 /* Preview Assets.xcassets */; };
 		DBFE29262452B1BB00B4D198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBFE29242452B1BB00B4D198 /* LaunchScreen.storyboard */; };
+		DBFE292E2452C88200B4D198 /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DBFE292D2452C88200B4D198 /* SleepCalculator.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DBFE29222452B1BB00B4D198 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBFE29252452B1BB00B4D198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBFE29272452B1BB00B4D198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBFE292D2452C88200B4D198 /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SleepCalculator.mlmodel; path = ../../SleepCalculator.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				DBFE291F2452B1BB00B4D198 /* Assets.xcassets */,
 				DBFE29242452B1BB00B4D198 /* LaunchScreen.storyboard */,
 				DBFE29272452B1BB00B4D198 /* Info.plist */,
+				DBFE292D2452C88200B4D198 /* SleepCalculator.mlmodel */,
 				DBFE29212452B1BB00B4D198 /* Preview Content */,
 			);
 			path = BetterRest;
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBFE291A2452B1BA00B4D198 /* AppDelegate.swift in Sources */,
+				DBFE292E2452C88200B4D198 /* SleepCalculator.mlmodel in Sources */,
 				DBFE291C2452B1BA00B4D198 /* SceneDelegate.swift in Sources */,
 				DBFE291E2452B1BA00B4D198 /* ContentView.swift in Sources */,
 			);
