@@ -18,6 +18,8 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var showingError = false
     
+    @State private var score: Int = 0
+    
     // MARK: Body
     var body: some View {
         NavigationView {
@@ -30,8 +32,15 @@ struct ContentView: View {
                     Image(systemName: "\($0.count).circle")
                     Text($0)
                 }
+                Text("Score: \(score)")
             }
             .navigationBarTitle(rootWord)
+            .navigationBarItems(trailing: Button(action: {
+                self.startGame()
+            }) {
+                Text("Restart")
+                    .font(.title)
+            })
             .onAppear(perform: startGame)
             .alert(isPresented: $showingError) {
                 Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
@@ -69,6 +78,16 @@ struct ContentView: View {
             return
         }
         
+        guard answer != rootWord else {
+            wordError(title: "Word is same as root word", message: "Be more original")
+            return
+        }
+        
+        guard hasThreeOrMoreLetters(word: answer) else {
+            wordError(title: "Word is too short", message: "Use three or more letters")
+            return
+        }
+        
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original")
             return
@@ -83,9 +102,18 @@ struct ContentView: View {
             wordError(title: "Word not possible", message: "That isn't a real word.")
             return
         }
+
+        score += Int((Double(answer.count) * (1/3)).rounded())
         
         usedWords.insert(answer, at: 0)
         newWord = ""
+        
+        
+    }
+    
+    
+    func hasThreeOrMoreLetters(word: String) -> Bool {
+        word.count >= 3
     }
     
     func isOriginal(word: String) -> Bool {
