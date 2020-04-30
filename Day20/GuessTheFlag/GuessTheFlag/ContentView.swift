@@ -17,6 +17,10 @@ struct ContentView: View {
     @State private var scoreTitle = ""
     
     @State private var score = 0
+    
+    @State private var animationAmounts: [Double] = [0, 0, 0]
+    @State private var opacities: [Double] = [1, 1, 1]
+    @State private var redOpacities: [Double] = [0, 0, 0]
 
     // MARK: Body
     var body: some View {
@@ -45,6 +49,14 @@ struct ContentView: View {
 //                            .shadow(color: .black, radius: 2)
 
                     }
+                    .rotation3DEffect(.degrees(self.animationAmounts[number]), axis: (x: 0, y: 1, z: 0))
+                    .opacity(self.opacities[number])
+                    .overlay(
+                        Color.red.clipShape(Capsule())
+                            .overlay(Capsule().stroke(Color.black, lineWidth: 1))
+                            .shadow(color: .black, radius: 2)
+                            .opacity(self.redOpacities[number])
+                    )
                 }
                 Text("Your Score: \(score)")
                 .foregroundColor(.white)
@@ -54,6 +66,8 @@ struct ContentView: View {
         .alert(isPresented: $showingScore) {
             Alert(title: Text(scoreTitle), message: Text("Your score is \(score)"), dismissButton: .default(Text("Continue")) {
                     self.askQuestion()
+                    self.opacities = [1, 1, 1]
+                    self.redOpacities = [0, 0, 0]
                 })
         }
     }
@@ -63,9 +77,22 @@ struct ContentView: View {
         if number == correctAnswer {
             scoreTitle = "Correct"
             score += 1
+            withAnimation {
+                animationAmounts[correctAnswer] += 360
+                for i in 0..<3 {
+                    if i != correctAnswer {
+                        opacities[i] = 0.25
+                    }
+                }
+            }
+            
         } else {
             scoreTitle = "Wrong! That's the flag of \(countries[number])"
             score -= 1
+            
+            withAnimation {
+                redOpacities = [0.5, 0.5, 0.5]
+            }
         }
         
         showingScore = true
