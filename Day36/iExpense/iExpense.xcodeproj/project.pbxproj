@@ -17,6 +17,9 @@
 		DB264D74245D4D95008F2358 /* ShowingHidingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264D73245D4D95008F2358 /* ShowingHidingViews.swift */; };
 		DB264D76245D4ECD008F2358 /* DeletingItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264D75245D4ECD008F2358 /* DeletingItems.swift */; };
 		DB264D78245D5125008F2358 /* StoringUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264D77245D5125008F2358 /* StoringUserDefaults.swift */; };
+		DB264D7A245F1323008F2358 /* ArchivingCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264D79245F1323008F2358 /* ArchivingCodable.swift */; };
+		DB264D7D245F1592008F2358 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264D7C245F1592008F2358 /* ExpenseItem.swift */; };
+		DB264D7F245F18AC008F2358 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264D7E245F18AC008F2358 /* Expenses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		DB264D73245D4D95008F2358 /* ShowingHidingViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowingHidingViews.swift; sourceTree = "<group>"; };
 		DB264D75245D4ECD008F2358 /* DeletingItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletingItems.swift; sourceTree = "<group>"; };
 		DB264D77245D5125008F2358 /* StoringUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoringUserDefaults.swift; sourceTree = "<group>"; };
+		DB264D79245F1323008F2358 /* ArchivingCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivingCodable.swift; sourceTree = "<group>"; };
+		DB264D7C245F1592008F2358 /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
+		DB264D7E245F18AC008F2358 /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +73,9 @@
 				DB264D5D245CA6A5008F2358 /* AppDelegate.swift */,
 				DB264D5F245CA6A5008F2358 /* SceneDelegate.swift */,
 				DB264D61245CA6A5008F2358 /* ContentView.swift */,
-				DB264D75245D4ECD008F2358 /* DeletingItems.swift */,
-				DB264D77245D5125008F2358 /* StoringUserDefaults.swift */,
-				DB264D73245D4D95008F2358 /* ShowingHidingViews.swift */,
-				DB264D71245D4BDB008F2358 /* ObservableObjectExample.swift */,
+				DB264D7E245F18AC008F2358 /* Expenses.swift */,
+				DB264D7C245F1592008F2358 /* ExpenseItem.swift */,
+				DB264D7B245F1582008F2358 /* Demos */,
 				DB264D63245CA6A6008F2358 /* Assets.xcassets */,
 				DB264D68245CA6A6008F2358 /* LaunchScreen.storyboard */,
 				DB264D6B245CA6A6008F2358 /* Info.plist */,
@@ -85,6 +90,18 @@
 				DB264D66245CA6A6008F2358 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DB264D7B245F1582008F2358 /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				DB264D79245F1323008F2358 /* ArchivingCodable.swift */,
+				DB264D75245D4ECD008F2358 /* DeletingItems.swift */,
+				DB264D77245D5125008F2358 /* StoringUserDefaults.swift */,
+				DB264D73245D4D95008F2358 /* ShowingHidingViews.swift */,
+				DB264D71245D4BDB008F2358 /* ObservableObjectExample.swift */,
+			);
+			path = Demos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,12 +175,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB264D7F245F18AC008F2358 /* Expenses.swift in Sources */,
 				DB264D76245D4ECD008F2358 /* DeletingItems.swift in Sources */,
 				DB264D72245D4BDB008F2358 /* ObservableObjectExample.swift in Sources */,
 				DB264D78245D5125008F2358 /* StoringUserDefaults.swift in Sources */,
 				DB264D5E245CA6A5008F2358 /* AppDelegate.swift in Sources */,
+				DB264D7D245F1592008F2358 /* ExpenseItem.swift in Sources */,
 				DB264D60245CA6A5008F2358 /* SceneDelegate.swift in Sources */,
 				DB264D74245D4D95008F2358 /* ShowingHidingViews.swift in Sources */,
+				DB264D7A245F1323008F2358 /* ArchivingCodable.swift in Sources */,
 				DB264D62245CA6A5008F2358 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
