@@ -20,6 +20,7 @@
 		DB264D7A245F1323008F2358 /* ArchivingCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264D79245F1323008F2358 /* ArchivingCodable.swift */; };
 		DB264D7D245F1592008F2358 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264D7C245F1592008F2358 /* ExpenseItem.swift */; };
 		DB264D7F245F18AC008F2358 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264D7E245F18AC008F2358 /* Expenses.swift */; };
+		DB264D81245F2CAD008F2358 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264D80245F2CAD008F2358 /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		DB264D79245F1323008F2358 /* ArchivingCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivingCodable.swift; sourceTree = "<group>"; };
 		DB264D7C245F1592008F2358 /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
 		DB264D7E245F18AC008F2358 /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		DB264D80245F2CAD008F2358 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				DB264D5D245CA6A5008F2358 /* AppDelegate.swift */,
 				DB264D5F245CA6A5008F2358 /* SceneDelegate.swift */,
 				DB264D61245CA6A5008F2358 /* ContentView.swift */,
+				DB264D80245F2CAD008F2358 /* AddView.swift */,
 				DB264D7E245F18AC008F2358 /* Expenses.swift */,
 				DB264D7C245F1592008F2358 /* ExpenseItem.swift */,
 				DB264D7B245F1582008F2358 /* Demos */,
@@ -181,6 +184,7 @@
 				DB264D78245D5125008F2358 /* StoringUserDefaults.swift in Sources */,
 				DB264D5E245CA6A5008F2358 /* AppDelegate.swift in Sources */,
 				DB264D7D245F1592008F2358 /* ExpenseItem.swift in Sources */,
+				DB264D81245F2CAD008F2358 /* AddView.swift in Sources */,
 				DB264D60245CA6A5008F2358 /* SceneDelegate.swift in Sources */,
 				DB264D74245D4D95008F2358 /* ShowingHidingViews.swift in Sources */,
 				DB264D7A245F1323008F2358 /* ArchivingCodable.swift in Sources */,
