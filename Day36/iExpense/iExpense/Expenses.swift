@@ -11,7 +11,6 @@ import SwiftUI
 class Expenses: ObservableObject {
     @Published var items: [ExpenseItem] {
         didSet {
-            print("didSet")
             let encoder = JSONEncoder()
             if let encoded = try? encoder.encode(items) {
                 UserDefaults.standard.set(encoded, forKey: "Items")
@@ -20,9 +19,7 @@ class Expenses: ObservableObject {
     }
     
     init() {
-        print("init")
         if let items = UserDefaults.standard.data(forKey: "Items") {
-            print("UserDefaults")
             let decoder = JSONDecoder()
             if let decoded = try? decoder.decode([ExpenseItem].self, from: items) {
                 self.items = decoded

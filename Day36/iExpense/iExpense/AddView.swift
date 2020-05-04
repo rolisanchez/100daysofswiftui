@@ -19,6 +19,10 @@ struct AddView: View {
 
     static let types = ["Business", "Personal"]
     
+    @State private var showingAlert = false
+    @State private var alertTitle = ""
+    @State private var alertMessage = ""
+    
     var body: some View {
         NavigationView {
             Form {
@@ -33,16 +37,23 @@ struct AddView: View {
             }
             .navigationBarTitle("Add new expense")
             .navigationBarItems(trailing: Button("Save") {
-                print("save")
                 if let actualAmount = Int(self.amount) {
-                    print("actualAmount \(actualAmount)")
                     let item = ExpenseItem(name: self.name, type: self.type, amount: actualAmount)
                     self.expenses.items.append(item)
+                    // MARK: TODO: Delete after Xcode 11.5 fixes this bug below
                     self.expenses.items = self.expenses.items
                     self.presentationMode.wrappedValue.dismiss()
+                } else {
+                    self.alertTitle = "Error saving expense"
+                    self.alertMessage = "Please enter a valid amount"
+                    self.showingAlert.toggle()
                 }
                 
             })
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")){
+                })
+            }
         }
     }
 }
