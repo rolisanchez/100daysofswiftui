@@ -9,8 +9,33 @@
 import SwiftUI
 
 struct ContentView: View {
+//    let astronauts = Bundle.main.decode("astronauts.json")
+    // Using Generics we need to pass exactly what type T is, so we use type annotation
+    let astronauts: [Astronaut] = Bundle.main.decode("astronauts.json")
+    // Using generics with same Bundle extension
+    let missions: [Mission] = Bundle.main.decode("missions.json")
+
     var body: some View {
-        Text("Start")
+        NavigationView {
+            List(missions) { mission in
+                NavigationLink(destination: Text("Detail view")) {
+                    Image(mission.image)
+                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+                        // Same as above:
+                        .scaledToFit()
+                        .frame(width: 44, height: 44)
+                    
+                    VStack(alignment: .leading) {
+                        Text(mission.displayName)
+                            .font(.headline)
+                        Text(mission.formattedLaunchDate)
+                    }
+                }
+            }
+            .navigationBarTitle("Moonshot")
+        }
+
     }
 }
 
