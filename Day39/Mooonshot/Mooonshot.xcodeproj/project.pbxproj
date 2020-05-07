@@ -22,6 +22,8 @@
 		DB3F86082461265500C23D89 /* ScrollViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3F86072461265500C23D89 /* ScrollViewDemo.swift */; };
 		DB3F860A2461269800C23D89 /* NavigationLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3F86092461269800C23D89 /* NavigationLinkView.swift */; };
 		DB3F860C246127F700C23D89 /* HierarchicalCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3F860B246127F700C23D89 /* HierarchicalCodable.swift */; };
+		DBF4B2CE2463C0B5004265A2 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF4B2CD2463C0B5004265A2 /* MissionView.swift */; };
+		DBF4B2D02463C7FE004265A2 /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF4B2CF2463C7FE004265A2 /* AstronautView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		DB3F86072461265500C23D89 /* ScrollViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewDemo.swift; sourceTree = "<group>"; };
 		DB3F86092461269800C23D89 /* NavigationLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkView.swift; sourceTree = "<group>"; };
 		DB3F860B246127F700C23D89 /* HierarchicalCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchicalCodable.swift; sourceTree = "<group>"; };
+		DBF4B2CD2463C0B5004265A2 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
+		DBF4B2CF2463C7FE004265A2 /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				DB196E382462901D00E6EFF2 /* Mission.swift */,
 				DB196E3424628F3C00E6EFF2 /* Astronaut.swift */,
 				DB196E3624628F6D00E6EFF2 /* Bundle-Decodable.swift */,
+				DBF4B2CD2463C0B5004265A2 /* MissionView.swift */,
+				DBF4B2CF2463C7FE004265A2 /* AstronautView.swift */,
 				DB196E3024628F1600E6EFF2 /* astronauts.json */,
 				DB196E3124628F1700E6EFF2 /* missions.json */,
 				DB3F86062461264900C23D89 /* Demo */,
@@ -190,8 +196,10 @@
 				DB3F86052461263600C23D89 /* GeometryReaderImages.swift in Sources */,
 				DB196E3724628F6D00E6EFF2 /* Bundle-Decodable.swift in Sources */,
 				DB3F860A2461269800C23D89 /* NavigationLinkView.swift in Sources */,
+				DBF4B2CE2463C0B5004265A2 /* MissionView.swift in Sources */,
 				DB3F86082461265500C23D89 /* ScrollViewDemo.swift in Sources */,
 				DB196E392462901D00E6EFF2 /* Mission.swift in Sources */,
+				DBF4B2D02463C7FE004265A2 /* AstronautView.swift in Sources */,
 				DB3F85F524611EE300C23D89 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
