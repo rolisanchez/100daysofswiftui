@@ -15,10 +15,12 @@ struct ContentView: View {
     // Using generics with same Bundle extension
     let missions: [Mission] = Bundle.main.decode("missions.json")
 
+    @State private var showingCrewNames = false
+    
     var body: some View {
         NavigationView {
             List(missions) { mission in
-                NavigationLink(destination:  MissionView(mission: mission, astronauts: self.astronauts)) {
+                NavigationLink(destination:  MissionView(mission: mission, missions: self.missions, astronauts: self.astronauts)) {
                     Image(mission.image)
                         .resizable()
 //                        .aspectRatio(contentMode: .fit)
@@ -29,11 +31,21 @@ struct ContentView: View {
                     VStack(alignment: .leading) {
                         Text(mission.displayName)
                             .font(.headline)
-                        Text(mission.formattedLaunchDate)
+                        if self.showingCrewNames {
+                            Text(mission.formattedCrew)
+                        } else {
+                            Text(mission.formattedLaunchDate)
+                        }
+                        
                     }
                 }
             }
             .navigationBarTitle("Moonshot")
+            .navigationBarItems(leading: Button(action: {
+                self.showingCrewNames.toggle()
+            }, label: {
+                Text("Show \(showingCrewNames ? "dates" : "crew")")
+            }))
         }
 
     }

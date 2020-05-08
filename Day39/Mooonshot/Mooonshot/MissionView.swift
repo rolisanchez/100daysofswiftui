@@ -16,6 +16,8 @@ struct MissionView: View {
     
     let mission: Mission
     
+    let missions: [Mission]
+    
     let astronauts: [CrewMember]
 
     var body: some View {
@@ -27,20 +29,24 @@ struct MissionView: View {
                         .scaledToFit()
                         .frame(maxWidth: geometry.size.width * 0.7)
                         .padding(.top)
-                    
+                    Text(self.mission.formattedLaunchDate)
+                        .font(.headline)
                     Text(self.mission.description)
                         .padding()
                     
                     Spacer(minLength: 25)
                     
                     ForEach(self.astronauts, id: \.role) { crewMember in
-                        NavigationLink(destination: AstronautView(astronaut: crewMember.astronaut)) {
+                        NavigationLink(destination: AstronautView(astronaut: crewMember.astronaut, missions: self.missions)) {
                             HStack {
-                                Image(crewMember.astronaut.id)
-                                    .resizable()
-                                    .frame(width: 83, height: 60)
-                                    .clipShape(Capsule())
-                                    .overlay(Capsule().stroke(Color.primary, lineWidth: 1))
+                                
+                            Image(crewMember.astronaut.id)
+                                .resizable()
+                                .frame(width: 83, height: 60)
+                                .clipShape(Capsule())
+                                .overlay(Capsule().stroke(Color.primary, lineWidth: 1))
+                                    
+                                
                                 
                                 VStack(alignment: .leading) {
                                     Text(crewMember.astronaut.name)
@@ -62,9 +68,9 @@ struct MissionView: View {
         .navigationBarTitle(Text(mission.displayName), displayMode: .inline)
     }
     
-    init(mission: Mission, astronauts: [Astronaut]) {
+    init(mission: Mission, missions: [Mission], astronauts: [Astronaut]) {
         self.mission = mission
-        
+        self.missions = missions
         var matches = [CrewMember]()
         
         for member in mission.crew {
@@ -84,6 +90,6 @@ struct MissionView_Previews: PreviewProvider {
     static let astronauts: [Astronaut] = Bundle.main.decode("astronauts.json")
 
     static var previews: some View {
-        MissionView(mission: missions[0], astronauts: astronauts)
+        MissionView(mission: missions[0], missions: missions, astronauts: astronauts)
     }
 }
