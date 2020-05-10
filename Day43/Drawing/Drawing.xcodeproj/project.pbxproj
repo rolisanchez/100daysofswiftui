@@ -16,6 +16,10 @@
 		DBAE38552466B0B500A0A952 /* CustomPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAE38542466B0B500A0A952 /* CustomPath.swift */; };
 		DBAE38582466B6A300A0A952 /* PathVsShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAE38572466B6A300A0A952 /* PathVsShape.swift */; };
 		DBAE385A2466C1C500A0A952 /* InsettableShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAE38592466C1C500A0A952 /* InsettableShape.swift */; };
+		DBF65A172467D09D00259FB7 /* CGAffineTransformDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF65A162467D09D00259FB7 /* CGAffineTransformDemo.swift */; };
+		DBF65A192467DB2E00259FB7 /* ImagePaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF65A182467DB2E00259FB7 /* ImagePaint.swift */; };
+		DBF65A1B2467DEC400259FB7 /* EnablingMetal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF65A1A2467DEC400259FB7 /* EnablingMetal.swift */; };
+		DBF65A1D2467EADA00259FB7 /* ColorCyclingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF65A1C2467EADA00259FB7 /* ColorCyclingCircle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		DBAE38542466B0B500A0A952 /* CustomPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPath.swift; sourceTree = "<group>"; };
 		DBAE38572466B6A300A0A952 /* PathVsShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathVsShape.swift; sourceTree = "<group>"; };
 		DBAE38592466C1C500A0A952 /* InsettableShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsettableShape.swift; sourceTree = "<group>"; };
+		DBF65A162467D09D00259FB7 /* CGAffineTransformDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransformDemo.swift; sourceTree = "<group>"; };
+		DBF65A182467DB2E00259FB7 /* ImagePaint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePaint.swift; sourceTree = "<group>"; };
+		DBF65A1A2467DEC400259FB7 /* EnablingMetal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnablingMetal.swift; sourceTree = "<group>"; };
+		DBF65A1C2467EADA00259FB7 /* ColorCyclingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCyclingCircle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,10 @@
 				DBAE38542466B0B500A0A952 /* CustomPath.swift */,
 				DBAE38572466B6A300A0A952 /* PathVsShape.swift */,
 				DBAE38592466C1C500A0A952 /* InsettableShape.swift */,
+				DBF65A162467D09D00259FB7 /* CGAffineTransformDemo.swift */,
+				DBF65A182467DB2E00259FB7 /* ImagePaint.swift */,
+				DBF65A1C2467EADA00259FB7 /* ColorCyclingCircle.swift */,
+				DBF65A1A2467DEC400259FB7 /* EnablingMetal.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -165,10 +177,14 @@
 			files = (
 				DBAE38412466873400A0A952 /* AppDelegate.swift in Sources */,
 				DBAE38582466B6A300A0A952 /* PathVsShape.swift in Sources */,
+				DBF65A192467DB2E00259FB7 /* ImagePaint.swift in Sources */,
+				DBF65A1B2467DEC400259FB7 /* EnablingMetal.swift in Sources */,
 				DBAE385A2466C1C500A0A952 /* InsettableShape.swift in Sources */,
+				DBF65A1D2467EADA00259FB7 /* ColorCyclingCircle.swift in Sources */,
 				DBAE38432466873400A0A952 /* SceneDelegate.swift in Sources */,
 				DBAE38452466873400A0A952 /* ContentView.swift in Sources */,
 				DBAE38552466B0B500A0A952 /* CustomPath.swift in Sources */,
+				DBF65A172467D09D00259FB7 /* CGAffineTransformDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
