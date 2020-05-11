@@ -20,6 +20,10 @@
 		DBF65A192467DB2E00259FB7 /* ImagePaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF65A182467DB2E00259FB7 /* ImagePaint.swift */; };
 		DBF65A1B2467DEC400259FB7 /* EnablingMetal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF65A1A2467DEC400259FB7 /* EnablingMetal.swift */; };
 		DBF65A1D2467EADA00259FB7 /* ColorCyclingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF65A1C2467EADA00259FB7 /* ColorCyclingCircle.swift */; };
+		DBF65A2124690D9B00259FB7 /* SpecialEffectsDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF65A2024690D9B00259FB7 /* SpecialEffectsDemo.swift */; };
+		DBF65A232469100B00259FB7 /* AnimatingSimpleShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF65A222469100B00259FB7 /* AnimatingSimpleShapes.swift */; };
+		DBF65A25246912A300259FB7 /* AnimatingComplexShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF65A24246912A300259FB7 /* AnimatingComplexShapes.swift */; };
+		DBF65A27246913BC00259FB7 /* SpirographDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF65A26246913BC00259FB7 /* SpirographDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		DBF65A182467DB2E00259FB7 /* ImagePaint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePaint.swift; sourceTree = "<group>"; };
 		DBF65A1A2467DEC400259FB7 /* EnablingMetal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnablingMetal.swift; sourceTree = "<group>"; };
 		DBF65A1C2467EADA00259FB7 /* ColorCyclingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCyclingCircle.swift; sourceTree = "<group>"; };
+		DBF65A2024690D9B00259FB7 /* SpecialEffectsDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialEffectsDemo.swift; sourceTree = "<group>"; };
+		DBF65A222469100B00259FB7 /* AnimatingSimpleShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingSimpleShapes.swift; sourceTree = "<group>"; };
+		DBF65A24246912A300259FB7 /* AnimatingComplexShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingComplexShapes.swift; sourceTree = "<group>"; };
+		DBF65A26246913BC00259FB7 /* SpirographDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpirographDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 				DBF65A182467DB2E00259FB7 /* ImagePaint.swift */,
 				DBF65A1C2467EADA00259FB7 /* ColorCyclingCircle.swift */,
 				DBF65A1A2467DEC400259FB7 /* EnablingMetal.swift */,
+				DBF65A2024690D9B00259FB7 /* SpecialEffectsDemo.swift */,
+				DBF65A222469100B00259FB7 /* AnimatingSimpleShapes.swift */,
+				DBF65A24246912A300259FB7 /* AnimatingComplexShapes.swift */,
+				DBF65A26246913BC00259FB7 /* SpirographDemo.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -179,12 +191,16 @@
 				DBAE38582466B6A300A0A952 /* PathVsShape.swift in Sources */,
 				DBF65A192467DB2E00259FB7 /* ImagePaint.swift in Sources */,
 				DBF65A1B2467DEC400259FB7 /* EnablingMetal.swift in Sources */,
+				DBF65A232469100B00259FB7 /* AnimatingSimpleShapes.swift in Sources */,
 				DBAE385A2466C1C500A0A952 /* InsettableShape.swift in Sources */,
 				DBF65A1D2467EADA00259FB7 /* ColorCyclingCircle.swift in Sources */,
 				DBAE38432466873400A0A952 /* SceneDelegate.swift in Sources */,
 				DBAE38452466873400A0A952 /* ContentView.swift in Sources */,
 				DBAE38552466B0B500A0A952 /* CustomPath.swift in Sources */,
 				DBF65A172467D09D00259FB7 /* CGAffineTransformDemo.swift in Sources */,
+				DBF65A25246912A300259FB7 /* AnimatingComplexShapes.swift in Sources */,
+				DBF65A2124690D9B00259FB7 /* SpecialEffectsDemo.swift in Sources */,
+				DBF65A27246913BC00259FB7 /* SpirographDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
