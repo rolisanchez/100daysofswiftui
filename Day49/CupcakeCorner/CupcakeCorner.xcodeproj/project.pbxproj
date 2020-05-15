@@ -16,6 +16,9 @@
 		DB505658246D13EE00EFF653 /* CodableConformancePublished.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB505657246D13EE00EFF653 /* CodableConformancePublished.swift */; };
 		DB50565A246D152300EFF653 /* SendingReceivingCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB505659246D152300EFF653 /* SendingReceivingCodable.swift */; };
 		DB50565C246D1C5100EFF653 /* ValidatingDisablingForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB50565B246D1C5100EFF653 /* ValidatingDisablingForms.swift */; };
+		DBF73ED2246E62AC0014240E /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF73ED1246E62AC0014240E /* Order.swift */; };
+		DBF73ED4246E65D60014240E /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF73ED3246E65D60014240E /* AddressView.swift */; };
+		DBF73ED6246E664A0014240E /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF73ED5246E664A0014240E /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		DB505657246D13EE00EFF653 /* CodableConformancePublished.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableConformancePublished.swift; sourceTree = "<group>"; };
 		DB505659246D152300EFF653 /* SendingReceivingCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendingReceivingCodable.swift; sourceTree = "<group>"; };
 		DB50565B246D1C5100EFF653 /* ValidatingDisablingForms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatingDisablingForms.swift; sourceTree = "<group>"; };
+		DBF73ED1246E62AC0014240E /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		DBF73ED3246E65D60014240E /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		DBF73ED5246E664A0014240E /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,9 @@
 				DB505642246D0BA000EFF653 /* AppDelegate.swift */,
 				DB505644246D0BA000EFF653 /* SceneDelegate.swift */,
 				DB505646246D0BA000EFF653 /* ContentView.swift */,
+				DBF73ED1246E62AC0014240E /* Order.swift */,
+				DBF73ED3246E65D60014240E /* AddressView.swift */,
+				DBF73ED5246E664A0014240E /* CheckoutView.swift */,
 				DB505656246D13D700EFF653 /* Demos */,
 				DB505648246D0BA200EFF653 /* Assets.xcassets */,
 				DB50564D246D0BA200EFF653 /* LaunchScreen.storyboard */,
@@ -168,7 +177,10 @@
 				DB505647246D0BA000EFF653 /* ContentView.swift in Sources */,
 				DB505658246D13EE00EFF653 /* CodableConformancePublished.swift in Sources */,
 				DB50565C246D1C5100EFF653 /* ValidatingDisablingForms.swift in Sources */,
+				DBF73ED4246E65D60014240E /* AddressView.swift in Sources */,
 				DB50565A246D152300EFF653 /* SendingReceivingCodable.swift in Sources */,
+				DBF73ED2246E62AC0014240E /* Order.swift in Sources */,
+				DBF73ED6246E664A0014240E /* CheckoutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
