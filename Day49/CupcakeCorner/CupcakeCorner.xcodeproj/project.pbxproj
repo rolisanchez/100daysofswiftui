@@ -49,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB177C39246FBC7600D23877 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DBF73ED1246E62AC0014240E /* Order.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DB177C3A246FBC8400D23877 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB505646246D0BA000EFF653 /* ContentView.swift */,
+				DBF73ED3246E65D60014240E /* AddressView.swift */,
+				DBF73ED5246E664A0014240E /* CheckoutView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		DB505636246D0BA000EFF653 = {
 			isa = PBXGroup;
 			children = (
@@ -68,12 +86,10 @@
 		DB505641246D0BA000EFF653 /* CupcakeCorner */ = {
 			isa = PBXGroup;
 			children = (
+				DB177C3A246FBC8400D23877 /* Views */,
+				DB177C39246FBC7600D23877 /* Models */,
 				DB505642246D0BA000EFF653 /* AppDelegate.swift */,
 				DB505644246D0BA000EFF653 /* SceneDelegate.swift */,
-				DB505646246D0BA000EFF653 /* ContentView.swift */,
-				DBF73ED1246E62AC0014240E /* Order.swift */,
-				DBF73ED3246E65D60014240E /* AddressView.swift */,
-				DBF73ED5246E664A0014240E /* CheckoutView.swift */,
 				DB505656246D13D700EFF653 /* Demos */,
 				DB505648246D0BA200EFF653 /* Assets.xcassets */,
 				DB50564D246D0BA200EFF653 /* LaunchScreen.storyboard */,

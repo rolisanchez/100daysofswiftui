@@ -10,8 +10,10 @@ import SwiftUI
 
 
 struct ContentView: View {
+    // MARK: Properties
     @ObservedObject var order = Order()
 
+    // MARK: Body
     var body: some View {
         NavigationView {
             Form {

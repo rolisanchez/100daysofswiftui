@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct AddressView: View {
+    // MARK: Properties
     @ObservedObject var order: Order
     
+    // MARK: Body
     var body: some View {
         Form {
             Section {
