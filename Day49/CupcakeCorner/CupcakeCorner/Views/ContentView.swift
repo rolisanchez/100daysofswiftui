@@ -11,40 +11,43 @@ import SwiftUI
 
 struct ContentView: View {
     // MARK: Properties
-    @ObservedObject var order = Order()
+    // Old Class
+//    @ObservedObject var order = Order()
+    // New wrapper around struct
+    @ObservedObject var wrapper = OrderWrapper()
 
     // MARK: Body
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    Picker("Select your cake type", selection: $order.type) {
+                    Picker("Select your cake type", selection: $wrapper.order.type) {
                         ForEach(0..<Order.types.count) {
                             Text(Order.types[$0])
                         }
                     }
                     
-                    Stepper(value: $order.quantity, in: 3...20) {
-                        Text("Number of cakes: \(order.quantity)")
+                    Stepper(value: $wrapper.order.quantity, in: 3...20) {
+                        Text("Number of cakes: \(wrapper.order.quantity)")
                     }
                 }
                 Section {
-                    Toggle(isOn: $order.specialRequestEnabled.animation()) {
+                    Toggle(isOn: $wrapper.order.specialRequestEnabled.animation()) {
                         Text("Any special requests?")
                     }
                     
-                    if order.specialRequestEnabled {
-                        Toggle(isOn: $order.extraFrosting) {
+                    if wrapper.order.specialRequestEnabled {
+                        Toggle(isOn: $wrapper.order.extraFrosting) {
                             Text("Add extra frosting")
                         }
                         
-                        Toggle(isOn: $order.addSprinkles) {
+                        Toggle(isOn: $wrapper.order.addSprinkles) {
                             Text("Add extra sprinkles")
                         }
                     }
                 }
                 Section {
-                    NavigationLink(destination: AddressView(order: order)) {
+                    NavigationLink(destination: AddressView(wrapper: wrapper)) {
                         Text("Delivery details")
                     }
                 }

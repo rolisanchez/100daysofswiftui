@@ -10,7 +10,12 @@ import SwiftUI
 
 struct CheckoutView: View {
     // MARK: Properties
-    @ObservedObject var order: Order
+    // Old Class
+    //    @ObservedObject var order = Order()
+    // New wrapper around struct
+    @ObservedObject var wrapper = OrderWrapper()
+    
+    @State private var confirmationTitle = ""
     @State private var confirmationMessage = ""
     @State private var showingConfirmation = false
     
@@ -24,7 +29,7 @@ struct CheckoutView: View {
                         .scaledToFit()
                         .frame(width: geo.size.width)
                     
-                    Text("Your total is $\(self.order.cost, specifier: "%.2f")")
+                    Text("Your total is $\(self.wrapper.order.cost, specifier: "%.2f")")
                         .font(.title)
                     
                     Button("Place Order") {
@@ -36,13 +41,13 @@ struct CheckoutView: View {
         }
         .navigationBarTitle("Check out", displayMode: .inline)
         .alert(isPresented: $showingConfirmation) {
-            Alert(title: Text("Thank you!"), message: Text(confirmationMessage), dismissButton: .default(Text("OK")))
+            Alert(title: Text(confirmationTitle), message: Text(confirmationMessage), dismissButton: .default(Text("OK")))
         }
     }
     
      // MARK: Methods
     func placeOrder() {
-        guard let encoded = try? JSONEncoder().encode(order) else {
+        guard let encoded = try? JSONEncoder().encode(wrapper.order) else {
             print("Failed to encode order")
             return
         }
@@ -56,10 +61,25 @@ struct CheckoutView: View {
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
                 print("No data in response: \(error?.localizedDescription ?? "Unknown error").")
+                if let error = error {
+                    // If we want to use NSError
+//                    let nsError = error as NSError
+//                    if nsError.code == 1 {}
+                    // Using Swift's Error:
+                    if error._code == NSURLErrorNotConnectedToInternet {
+                        self.confirmationTitle = "Error"
+                        self.confirmationMessage = "It seems that you are not connected to the Internet."
+                        self.showingConfirmation = true
+                    }
+                }
+                
                 return
             }
             
+            
+            
             if let decodedOrder = try? JSONDecoder().decode(Order.self, from: data) {
+                self.confirmationTitle = "Thank you!"
                 self.confirmationMessage = "Your order for \(decodedOrder.quantity)x \(Order.types[decodedOrder.type].lowercased()) cupcakes is on its way!"
                 self.showingConfirmation = true
             } else {
@@ -72,6 +92,6 @@ struct CheckoutView: View {
 
 struct CheckoutView_Previews: PreviewProvider {
     static var previews: some View {
-        CheckoutView(order: Order())
+        CheckoutView(wrapper: OrderWrapper())
     }
 }
