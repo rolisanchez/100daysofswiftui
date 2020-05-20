@@ -20,6 +20,7 @@
 		DB7E826424740C9E00ED14F1 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7E826324740C9E00ED14F1 /* RatingView.swift */; };
 		DB7E82662474194700ED14F1 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7E82652474194700ED14F1 /* EmojiRatingView.swift */; };
 		DB848BD42473D4D000109FBB /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB848BD32473D4D000109FBB /* AddBookView.swift */; };
+		DBD0DD61247563B20081E3EC /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0DD60247563B20081E3EC /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		DB7E826324740C9E00ED14F1 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		DB7E82652474194700ED14F1 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
 		DB848BD32473D4D000109FBB /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		DBD0DD60247563B20081E3EC /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				DB848BD32473D4D000109FBB /* AddBookView.swift */,
 				DB7E826324740C9E00ED14F1 /* RatingView.swift */,
 				DB7E82652474194700ED14F1 /* EmojiRatingView.swift */,
+				DBD0DD60247563B20081E3EC /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				DB4555CD247275840061D902 /* CustomComponentBinding.swift in Sources */,
 				DB4555D12472C3900061D902 /* CoreDataDemo.swift in Sources */,
 				DB7E826424740C9E00ED14F1 /* RatingView.swift in Sources */,
+				DBD0DD61247563B20081E3EC /* DetailView.swift in Sources */,
 				DB848BD42473D4D000109FBB /* AddBookView.swift in Sources */,
 				DB4555BA247275500061D902 /* Bookworm.xcdatamodeld in Sources */,
 				DB4555CF247278330061D902 /* SizeClassesAnyView.swift in Sources */,
