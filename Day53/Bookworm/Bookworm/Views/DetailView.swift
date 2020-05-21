@@ -17,6 +17,13 @@ struct DetailView: View {
     
     let book: Book
     
+    static let taskDateFormat: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        return formatter
+    }()
+    
+    
     // MARK: Body
     var body: some View {
         GeometryReader { geometry in
@@ -39,6 +46,9 @@ struct DetailView: View {
                     .foregroundColor(.secondary)
                 
                 Text(self.book.review ?? "No review")
+                    .padding()
+                
+                Text("Release date: \(self.getDateFormat())")
                     .padding()
                 
                 RatingView(rating: .constant(Int(self.book.rating)))
@@ -68,6 +78,18 @@ struct DetailView: View {
         // uncomment this line if you want to make the deletion permanent
         try? self.moc.save()
         presentationMode.wrappedValue.dismiss()
+    }
+    
+    func getDateFormat() -> String {
+        if let date = self.book.date {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            dateFormatter.timeStyle = .none
+            dateFormatter.locale = Locale(identifier: "en_US")
+            return dateFormatter.string(from: date)
+        } else {
+            return "Unknown"
+        }
     }
 }
 

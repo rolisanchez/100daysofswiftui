@@ -21,6 +21,22 @@ struct AddBookView: View {
     
     let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
 
+    var invalidTitle: Bool {
+        return title.trimmingCharacters(in: .whitespaces).isEmpty
+    }
+    
+    var invalidAuthor: Bool {
+        return author.trimmingCharacters(in: .whitespaces).isEmpty
+    }
+    
+    var invalidGenre: Bool {
+        return genre.trimmingCharacters(in: .whitespaces).isEmpty
+    }
+    
+    var invalidReview: Bool {
+        return review.trimmingCharacters(in: .whitespaces).isEmpty
+    }
+    
     // MARK: Body
     var body: some View {
         NavigationView {
@@ -59,12 +75,13 @@ struct AddBookView: View {
                         newBook.rating = Int16(self.rating)
                         newBook.genre = self.genre
                         newBook.review = self.review
-                        
+                        newBook.date = Date()
                         try? self.moc.save()
                         
                         self.presentationMode.wrappedValue.dismiss()
 
                     }
+                    .disabled(invalidTitle || invalidAuthor || invalidGenre || invalidReview)
                 }
             }
             .navigationBarTitle("Add Book")
