@@ -26,8 +26,8 @@ struct OldFilteredList<T: NSManagedObject, Content: View>: View {
     }
 }
 
-
-struct FilteredList<T: NSManagedObject, Content: View>: View {
+// Improved to use Generics
+struct GenericsFilteredList<T: NSManagedObject, Content: View>: View {
     // Generics
     var fetchRequest: FetchRequest<T>
     var singers: FetchedResults<T> { fetchRequest.wrappedValue }
@@ -45,4 +45,40 @@ struct FilteredList<T: NSManagedObject, Content: View>: View {
             self.content(singer)
         }
     }
+}
+
+// Improved Challenge
+struct FilteredList<T: NSManagedObject, Content: View>: View {
+    // Generics
+    var fetchRequest: FetchRequest<T>
+    var singers: FetchedResults<T> { fetchRequest.wrappedValue }
+//    var sortDescriptors: [NSSortDescriptor]
+    
+    // this is our content closure; we'll call this once for each item in the list
+    let content: (T) -> Content
+    
+    init(filterKey: String, filterValue: String, sortDescriptors: [NSSortDescriptor], predicateType: PredicateType, @ViewBuilder content: @escaping (T) -> Content) {
+        var predicate: NSPredicate?
+        switch predicateType {
+            case .beginsWith:
+                predicate = NSPredicate(format: "%K BEGINSWITH %@", filterKey, filterValue)
+            case .notBeginsWith:
+                predicate = NSPredicate(format: "NOT %K BEGINSWITH %@", filterKey, filterValue)
+            default:
+                predicate = nil
+        }
+        // NSPredicate(format: "%K BEGINSWITH %@", filterKey, filterValue)
+        fetchRequest = FetchRequest<T>(entity: T.entity(), sortDescriptors: sortDescriptors, predicate: predicate)
+        self.content = content
+    }
+    
+    var body: some View {
+        List(singers, id: \.self) { singer in
+            self.content(singer)
+        }
+    }
+}
+
+enum PredicateType {
+    case beginsWith, notBeginsWith, equals, lessthan, greaterThan, valueIn
 }

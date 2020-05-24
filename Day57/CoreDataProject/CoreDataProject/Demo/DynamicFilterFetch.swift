@@ -11,15 +11,20 @@ import SwiftUI
 struct DynamicFilterFetch: View {
     @Environment(\.managedObjectContext) var moc
     @State private var lastNameFilter = "A"
-    
+    @State private var ascending = true
+    @State private var predicateType: PredicateType = .beginsWith
     var body: some View {
         VStack {
             // list of matching singers
 //            FilteredList(filter: lastNameFilter)
-            FilteredList(filterKey: "lastName", filterValue: lastNameFilter) { (singer: Singer) in
+            // Without sort descriptors
+//            FilteredList(filterKey: "lastName", filterValue: lastNameFilter, sortDescriptors: []) { (singer: Singer) in
+//                Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
+//            }
+            // With sort descriptors
+            FilteredList(filterKey: "lastName", filterValue: lastNameFilter, sortDescriptors: [NSSortDescriptor(keyPath: \Singer.firstName, ascending: ascending)], predicateType: predicateType) { (singer: Singer) in
                 Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
             }
-
             Button("Add Examples") {
                 let taylor = Singer(context: self.moc)
                 taylor.firstName = "Taylor"
@@ -36,12 +41,21 @@ struct DynamicFilterFetch: View {
                 try? self.moc.save()
             }
             
-            Button("Show A") {
+            Button("Filter A") {
                 self.lastNameFilter = "A"
             }
             
-            Button("Show S") {
+            Button("Filter S") {
                 self.lastNameFilter = "S"
+            }
+            Button("Set Begins With") {
+                self.predicateType = .beginsWith
+            }
+            Button("Set Not Begins With") {
+                self.predicateType = .notBeginsWith
+            }
+            Button("Toggle ascending") {
+                self.ascending.toggle()
             }
         }
     }
