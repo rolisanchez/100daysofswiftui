@@ -41,6 +41,8 @@ struct DynamicFilterFetch: View {
                 try? self.moc.save()
             }
             
+            TextField("Enter last name for search", text: $lastNameFilter)
+            
             Button("Filter A") {
                 self.lastNameFilter = "A"
             }
