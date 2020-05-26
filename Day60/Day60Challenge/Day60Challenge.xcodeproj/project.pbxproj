@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB229C57247CFB920096A2CC /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB229C55247CFB920096A2CC /* User+CoreDataClass.swift */; };
+		DB229C58247CFB920096A2CC /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB229C56247CFB920096A2CC /* User+CoreDataProperties.swift */; };
 		DB903762247B9C0500FFA04E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB903761247B9C0500FFA04E /* AppDelegate.swift */; };
 		DB903764247B9C0500FFA04E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB903763247B9C0500FFA04E /* SceneDelegate.swift */; };
 		DB903767247B9C0500FFA04E /* Day60Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB903765247B9C0500FFA04E /* Day60Challenge.xcdatamodeld */; };
@@ -14,12 +16,14 @@
 		DB90376B247B9C0600FFA04E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB90376A247B9C0600FFA04E /* Assets.xcassets */; };
 		DB90376E247B9C0600FFA04E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB90376D247B9C0600FFA04E /* Preview Assets.xcassets */; };
 		DB903771247B9C0600FFA04E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB90376F247B9C0600FFA04E /* LaunchScreen.storyboard */; };
-		DB9F806F247BA133007AF456 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F806E247BA133007AF456 /* User.swift */; };
-		DB9F8071247BA1C8007AF456 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F8070247BA1C8007AF456 /* Friend.swift */; };
+		DB9F806F247BA133007AF456 /* DecodeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F806E247BA133007AF456 /* DecodeUser.swift */; };
+		DB9F8071247BA1C8007AF456 /* DecodeFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F8070247BA1C8007AF456 /* DecodeFriend.swift */; };
 		DBDE763F247BC45F00855EDA /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDE763E247BC45F00855EDA /* UserDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB229C55247CFB920096A2CC /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DB229C56247CFB920096A2CC /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DB90375E247B9C0500FFA04E /* Day60Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Day60Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB903761247B9C0500FFA04E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB903763247B9C0500FFA04E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,8 +33,8 @@
 		DB90376D247B9C0600FFA04E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB903770247B9C0600FFA04E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB903772247B9C0600FFA04E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB9F806E247BA133007AF456 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		DB9F8070247BA1C8007AF456 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		DB9F806E247BA133007AF456 /* DecodeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeUser.swift; sourceTree = "<group>"; };
+		DB9F8070247BA1C8007AF456 /* DecodeFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeFriend.swift; sourceTree = "<group>"; };
 		DBDE763E247BC45F00855EDA /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,8 +101,10 @@
 		DB9F806C247BA10E007AF456 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DB9F806E247BA133007AF456 /* User.swift */,
-				DB9F8070247BA1C8007AF456 /* Friend.swift */,
+				DB229C55247CFB920096A2CC /* User+CoreDataClass.swift */,
+				DB229C56247CFB920096A2CC /* User+CoreDataProperties.swift */,
+				DB9F806E247BA133007AF456 /* DecodeUser.swift */,
+				DB9F8070247BA1C8007AF456 /* DecodeFriend.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,9 +184,11 @@
 				DBDE763F247BC45F00855EDA /* UserDetail.swift in Sources */,
 				DB903762247B9C0500FFA04E /* AppDelegate.swift in Sources */,
 				DB903769247B9C0500FFA04E /* ContentView.swift in Sources */,
-				DB9F8071247BA1C8007AF456 /* Friend.swift in Sources */,
-				DB9F806F247BA133007AF456 /* User.swift in Sources */,
+				DB9F8071247BA1C8007AF456 /* DecodeFriend.swift in Sources */,
+				DB9F806F247BA133007AF456 /* DecodeUser.swift in Sources */,
+				DB229C57247CFB920096A2CC /* User+CoreDataClass.swift in Sources */,
 				DB903764247B9C0500FFA04E /* SceneDelegate.swift in Sources */,
+				DB229C58247CFB920096A2CC /* User+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

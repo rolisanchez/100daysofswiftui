@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct User: Codable {
+struct DecodeUser: Codable {
     var id: String
     var isActive: Bool
     var name: String
@@ -19,17 +19,18 @@ struct User: Codable {
     var about: String
     var registered: String
     var tags: [String]
-    var friends: [Friend]
+    var friends: [DecodeFriend]
     
     var tagsString: String {
-        var str = ""
-        
-        for i in 0..<tags.count {
-            str += tags[i]
-            if i != tags.count-1 {
-                str += ", "
-            }
-        }
-        return str
+//        var str = ""
+//
+//        for i in 0..<tags.count {
+//            str += tags[i]
+//            if i != tags.count-1 {
+//                str += ", "
+//            }
+//        }
+//        return str
+        tags.joined(separator: ", ")
     }
 }
