@@ -16,6 +16,9 @@
 		DB2AF3FF247E2278007560E0 /* PropertyWrapperStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AF3FE247E2278007560E0 /* PropertyWrapperStructs.swift */; };
 		DB2AF401247E2411007560E0 /* CustomBindingsDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AF400247E2411007560E0 /* CustomBindingsDemo.swift */; };
 		DB2AF403247E2B03007560E0 /* MultipleOptionsActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AF402247E2B03007560E0 /* MultipleOptionsActionSheet.swift */; };
+		DBBCA62C247F83A6001FBF78 /* IntegrateCoreImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBCA62B247F83A6001FBF78 /* IntegrateCoreImage.swift */; };
+		DBBCA62E247F84C1001FBF78 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBCA62D247F84C1001FBF78 /* ImagePicker.swift */; };
+		DBBCA630247F88AA001FBF78 /* WrappingUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBCA62F247F88AA001FBF78 /* WrappingUIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		DB2AF3FE247E2278007560E0 /* PropertyWrapperStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrapperStructs.swift; sourceTree = "<group>"; };
 		DB2AF400247E2411007560E0 /* CustomBindingsDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBindingsDemo.swift; sourceTree = "<group>"; };
 		DB2AF402247E2B03007560E0 /* MultipleOptionsActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleOptionsActionSheet.swift; sourceTree = "<group>"; };
+		DBBCA62B247F83A6001FBF78 /* IntegrateCoreImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrateCoreImage.swift; sourceTree = "<group>"; };
+		DBBCA62D247F84C1001FBF78 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		DBBCA62F247F88AA001FBF78 /* WrappingUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappingUIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +69,11 @@
 			isa = PBXGroup;
 			children = (
 				DB2AF3FD247E226C007560E0 /* Demo */,
+				DB2AF3ED247E1817007560E0 /* ContentView.swift */,
+				DBBCA62D247F84C1001FBF78 /* ImagePicker.swift */,
+				DB2AF3EF247E1818007560E0 /* Assets.xcassets */,
 				DB2AF3E9247E1817007560E0 /* AppDelegate.swift */,
 				DB2AF3EB247E1817007560E0 /* SceneDelegate.swift */,
-				DB2AF3ED247E1817007560E0 /* ContentView.swift */,
-				DB2AF3EF247E1818007560E0 /* Assets.xcassets */,
 				DB2AF3F4247E1818007560E0 /* LaunchScreen.storyboard */,
 				DB2AF3F7247E1818007560E0 /* Info.plist */,
 				DB2AF3F1247E1818007560E0 /* Preview Content */,
@@ -88,6 +95,8 @@
 				DB2AF3FE247E2278007560E0 /* PropertyWrapperStructs.swift */,
 				DB2AF400247E2411007560E0 /* CustomBindingsDemo.swift */,
 				DB2AF402247E2B03007560E0 /* MultipleOptionsActionSheet.swift */,
+				DBBCA62B247F83A6001FBF78 /* IntegrateCoreImage.swift */,
+				DBBCA62F247F88AA001FBF78 /* WrappingUIViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -164,10 +173,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB2AF3EA247E1817007560E0 /* AppDelegate.swift in Sources */,
+				DBBCA62C247F83A6001FBF78 /* IntegrateCoreImage.swift in Sources */,
 				DB2AF401247E2411007560E0 /* CustomBindingsDemo.swift in Sources */,
 				DB2AF3FF247E2278007560E0 /* PropertyWrapperStructs.swift in Sources */,
 				DB2AF3EC247E1817007560E0 /* SceneDelegate.swift in Sources */,
+				DBBCA62E247F84C1001FBF78 /* ImagePicker.swift in Sources */,
 				DB2AF403247E2B03007560E0 /* MultipleOptionsActionSheet.swift in Sources */,
+				DBBCA630247F88AA001FBF78 /* WrappingUIViewController.swift in Sources */,
 				DB2AF3EE247E1817007560E0 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

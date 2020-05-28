@@ -1,15 +1,14 @@
 //
-//  ContentView.swift
+//  WrappingUIViewController.swift
 //  InstaFilter
 //
-//  Created by Victor Rolando Sanchez Jara on 5/27/20.
+//  Created by Victor Rolando Sanchez Jara on 5/28/20.
 //  Copyright © 2020 Victor Rolando Sanchez Jara. All rights reserved.
 //
 
 import SwiftUI
 
-
-struct ContentView: View {
+struct WrappingUIViewController: View {
     // MARK: Properties
     @State private var image: Image?
     @State private var showingImagePicker = false
@@ -31,11 +30,10 @@ struct ContentView: View {
     }
     
     // MARK: Methods
-
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct WrappingUIViewController_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        WrappingUIViewController()
     }
 }
