@@ -11,23 +11,10 @@ import SwiftUI
 
 struct ContentView: View {
     // MARK: Properties
-    @State private var image: Image?
-    @State private var showingImagePicker = false
     
     // MARK: Body
     var body: some View {
-        VStack {
-            image?
-                .resizable()
-                .scaledToFit()
-            
-            Button("Select Image") {
-                self.showingImagePicker = true
-            }
-        }
-        .sheet(isPresented: $showingImagePicker) {
-            ImagePicker()
-        }
+        Text("InstaFilter")
     }
     
     // MARK: Methods
@@ -39,3 +26,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

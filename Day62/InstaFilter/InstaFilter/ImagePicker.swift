@@ -11,10 +11,13 @@ import SwiftUI
 struct ImagePicker: UIViewControllerRepresentable {
     // Just use this in the beginning as a shortcut :)
 //    typealias UIViewControllerType = UIImagePickerController
+    @Environment(\.presentationMode) var presentationMode
+    @Binding var image: UIImage?
 
     // Xcode will generate the two methods below based on the shortcut above
     func makeUIViewController(context: Context) -> UIImagePickerController {
         let picker = UIImagePickerController()
+        picker.delegate = context.coordinator
         return picker
     }
     
@@ -22,4 +25,23 @@ struct ImagePicker: UIViewControllerRepresentable {
         // Not using for now
     }
     
+    class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+        var parent: ImagePicker
+        
+        init(_ parent: ImagePicker) {
+            self.parent = parent
+        }
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            if let uiImage = info[.originalImage] as? UIImage {
+                parent.image = uiImage
+            }
+            
+            parent.presentationMode.wrappedValue.dismiss()
+        }
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
 }

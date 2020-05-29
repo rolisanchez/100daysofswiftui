@@ -19,6 +19,7 @@
 		DBBCA62C247F83A6001FBF78 /* IntegrateCoreImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBCA62B247F83A6001FBF78 /* IntegrateCoreImage.swift */; };
 		DBBCA62E247F84C1001FBF78 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBCA62D247F84C1001FBF78 /* ImagePicker.swift */; };
 		DBBCA630247F88AA001FBF78 /* WrappingUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBCA62F247F88AA001FBF78 /* WrappingUIViewController.swift */; };
+		DBBCA6362480FAB8001FBF78 /* UsingCoordinatorsAndSaving.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBCA6352480FAB8001FBF78 /* UsingCoordinatorsAndSaving.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		DBBCA62B247F83A6001FBF78 /* IntegrateCoreImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrateCoreImage.swift; sourceTree = "<group>"; };
 		DBBCA62D247F84C1001FBF78 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		DBBCA62F247F88AA001FBF78 /* WrappingUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappingUIViewController.swift; sourceTree = "<group>"; };
+		DBBCA6352480FAB8001FBF78 /* UsingCoordinatorsAndSaving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingCoordinatorsAndSaving.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				DB2AF402247E2B03007560E0 /* MultipleOptionsActionSheet.swift */,
 				DBBCA62B247F83A6001FBF78 /* IntegrateCoreImage.swift */,
 				DBBCA62F247F88AA001FBF78 /* WrappingUIViewController.swift */,
+				DBBCA6352480FAB8001FBF78 /* UsingCoordinatorsAndSaving.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			files = (
 				DB2AF3EA247E1817007560E0 /* AppDelegate.swift in Sources */,
 				DBBCA62C247F83A6001FBF78 /* IntegrateCoreImage.swift in Sources */,
+				DBBCA6362480FAB8001FBF78 /* UsingCoordinatorsAndSaving.swift in Sources */,
 				DB2AF401247E2411007560E0 /* CustomBindingsDemo.swift in Sources */,
 				DB2AF3FF247E2278007560E0 /* PropertyWrapperStructs.swift in Sources */,
 				DB2AF3EC247E1817007560E0 /* SceneDelegate.swift in Sources */,

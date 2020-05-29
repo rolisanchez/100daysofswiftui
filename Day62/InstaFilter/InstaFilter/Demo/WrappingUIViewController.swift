@@ -25,7 +25,8 @@ struct WrappingUIViewController: View {
             }
         }
         .sheet(isPresented: $showingImagePicker) {
-            ImagePicker()
+//            ImagePicker()
+            Text("Now Image Picker needs a UIImage")
         }
     }
     
