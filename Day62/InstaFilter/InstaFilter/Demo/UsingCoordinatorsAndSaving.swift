@@ -36,7 +36,7 @@ struct UsingCoordinatorsAndSaving: View {
         // This duplicates the image
         //        UIImageWriteToSavedPhotosAlbum(inputImage, nil, nil, nil)
         // Using Image saver to get errors:
-        //        let imageSaver = ImageSaver()
+        //        let imageSaver = OldImageSaver()
         //        imageSaver.writeToPhotoAlbum(image: inputImage)
         
     }
@@ -49,7 +49,7 @@ struct UsingCoordinatorsAndSaving_Previews: PreviewProvider {
 }
 
 
-class ImageSaver: NSObject {
+class OldImageSaver: NSObject {
     func writeToPhotoAlbum(image: UIImage) {
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(saveError), nil)
     }
