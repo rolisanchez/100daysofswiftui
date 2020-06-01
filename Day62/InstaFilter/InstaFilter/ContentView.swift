@@ -15,6 +15,8 @@ struct ContentView: View {
     // Image selection
     @State private var image: Image?
     @State private var filterIntensity = 0.5
+    @State private var filterRadius = 0.5
+
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     // Filters
@@ -23,7 +25,9 @@ struct ContentView: View {
     let context = CIContext()
     @State private var showingFilterSheet = false
     @State private var processedImage: UIImage?
+    @State private var showingAlert = false
 
+    @State private var filterButtonTitle = "Sepia Filter (Tap to Change)"
     // MARK: Body
     var body: some View {
         let intensity = Binding<Double>(
@@ -35,7 +39,16 @@ struct ContentView: View {
                     self.applyProcessing()
             }
         )
-        
+    
+        let radius = Binding<Double>(
+            get: {
+                self.filterRadius
+        },
+            set: {
+                self.filterRadius = $0
+                self.applyProcessing()
+        }
+        )
         return NavigationView {
             VStack {
                 ZStack {
@@ -60,15 +73,25 @@ struct ContentView: View {
                     Slider(value: intensity)
                 }.padding(.vertical)
                 
+                if currentFilter.inputKeys.contains(kCIInputRadiusKey) {
+                    HStack {
+                        Text("Radius")
+                        Slider(value: radius)
+                    }.padding(.vertical)
+                }
                 HStack {
-                    Button("Change Filter") {
+                    Button(filterButtonTitle) {
                         self.showingFilterSheet = true
                     }
                     
                     Spacer()
                     
                     Button("Save") {
-                        guard let processedImage = self.processedImage else { return }
+                        guard let processedImage = self.processedImage else {
+                            self.showingAlert = true
+                            return
+                            
+                        }
                         
                         // Without error/success handler
 //                        let imageSaver = ImageSaver()
@@ -95,17 +118,42 @@ struct ContentView: View {
                 ImagePicker(image: self.$inputImage)
             }
             .actionSheet(isPresented: $showingFilterSheet) {
-                ActionSheet(title: Text("Select a filter"), buttons: [
-                    .default(Text("Crystallize")) { self.setFilter(CIFilter.crystallize()) },
-                    .default(Text("Edges")) { self.setFilter(CIFilter.edges()) },
-                    .default(Text("Gaussian Blur")) { self.setFilter(CIFilter.gaussianBlur()) },
-                    .default(Text("Pixellate")) { self.setFilter(CIFilter.pixellate()) },
-                    .default(Text("Sepia Tone")) { self.setFilter(CIFilter.sepiaTone()) },
-                    .default(Text("Unsharp Mask")) { self.setFilter(CIFilter.unsharpMask()) },
+                ActionSheet(title: Text("Change filter"), buttons: [
+                    .default(Text("Crystallize")) {
+                        self.filterButtonTitle = "Crystallize Filter (Tap to Change)"
+                        self.setFilter(CIFilter.crystallize())
+                    },
+                    .default(Text("Edges")) {
+                        self.filterButtonTitle = "Edges Filter (Tap to Change)"
+                        self.setFilter(CIFilter.edges())
+                    },
+                    .default(Text("Gaussian Blur")) {
+                        self.filterButtonTitle = "Gaussian Blur (Tap to Change)"
+                        self.setFilter(CIFilter.gaussianBlur())
+                    },
+                    .default(Text("Pixellate")) {
+                        self.filterButtonTitle = "Pixellate Filter (Tap to Change)"
+                        self.setFilter(CIFilter.pixellate())
+                    },
+                    .default(Text("Sepia Tone")) {
+                        self.filterButtonTitle = "Sepia Filter (Tap to Change)"
+                        self.setFilter(CIFilter.sepiaTone())
+                        
+                    },
+                    .default(Text("Unsharp Mask")) {
+                        self.filterButtonTitle = "Unsharp Filter (Tap to Change)"
+                        self.setFilter(CIFilter.unsharpMask())
+                    },
                     .default(Text("Vignette")) { self.setFilter(CIFilter.vignette()) },
                     .cancel()
                 ])
             }
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text("Error"), message: Text("Please choose an image"), dismissButton: .default(Text("Ok")))
+            }
+
+            
+//            Experiment with having more than one slider, to control each of the input keys you care about. For example, you might have one for radius and one for intensity.
         }
     }
     
@@ -130,9 +178,15 @@ struct ContentView: View {
         // Bewlo only for for Sepia
 //        currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey)
         let inputKeys = currentFilter.inputKeys
-        if inputKeys.contains(kCIInputIntensityKey) { currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey) }
-        if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(filterIntensity * 200, forKey: kCIInputRadiusKey) }
-        if inputKeys.contains(kCIInputScaleKey) { currentFilter.setValue(filterIntensity * 10, forKey: kCIInputScaleKey) }
+        if inputKeys.contains(kCIInputIntensityKey) {
+            print("kCIInputIntensityKey")
+            currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey) }
+        if inputKeys.contains(kCIInputRadiusKey) {
+            print("kCIInputRadiusKey")
+            currentFilter.setValue(filterRadius * 200, forKey: kCIInputRadiusKey) }
+        if inputKeys.contains(kCIInputScaleKey) {
+            print("kCIInputScaleKey")
+            currentFilter.setValue(filterIntensity * 10, forKey: kCIInputScaleKey) }
 
         guard let outputImage = currentFilter.outputImage else { return }
         
