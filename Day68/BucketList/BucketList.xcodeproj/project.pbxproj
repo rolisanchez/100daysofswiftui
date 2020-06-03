@@ -16,6 +16,7 @@
 		DBBAB0C6248636BC00B13E71 /* ComparableDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBAB0C5248636BC00B13E71 /* ComparableDemo.swift */; };
 		DBBAB0C82486383D00B13E71 /* DocumentsDirectoryDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBAB0C72486383D00B13E71 /* DocumentsDirectoryDemo.swift */; };
 		DBBAB0CA24863C6D00B13E71 /* ViewStatesEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBAB0C924863C6D00B13E71 /* ViewStatesEnums.swift */; };
+		DBBAB0CC248785F300B13E71 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBAB0CB248785F300B13E71 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DBBAB0C5248636BC00B13E71 /* ComparableDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableDemo.swift; sourceTree = "<group>"; };
 		DBBAB0C72486383D00B13E71 /* DocumentsDirectoryDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsDirectoryDemo.swift; sourceTree = "<group>"; };
 		DBBAB0C924863C6D00B13E71 /* ViewStatesEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStatesEnums.swift; sourceTree = "<group>"; };
+		DBBAB0CB248785F300B13E71 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				DBBAB0B3248566E100B13E71 /* ContentView.swift */,
+				DBBAB0CB248785F300B13E71 /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBBAB0CC248785F300B13E71 /* MapView.swift in Sources */,
 				DBBAB0C82486383D00B13E71 /* DocumentsDirectoryDemo.swift in Sources */,
 				DBBAB0CA24863C6D00B13E71 /* ViewStatesEnums.swift in Sources */,
 				DBBAB0B0248566E100B13E71 /* AppDelegate.swift in Sources */,
