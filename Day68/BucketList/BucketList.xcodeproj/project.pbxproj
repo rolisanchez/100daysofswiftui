@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB76E4532488BDA600DC241B /* MapViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76E4522488BDA600DC241B /* MapViewDemo.swift */; };
+		DB76E4552488BE4000DC241B /* AuthenticationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76E4542488BE4000DC241B /* AuthenticationDemo.swift */; };
 		DBBAB0B0248566E100B13E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBAB0AF248566E100B13E71 /* AppDelegate.swift */; };
 		DBBAB0B2248566E100B13E71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBAB0B1248566E100B13E71 /* SceneDelegate.swift */; };
 		DBBAB0B4248566E100B13E71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBAB0B3248566E100B13E71 /* ContentView.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB76E4522488BDA600DC241B /* MapViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewDemo.swift; sourceTree = "<group>"; };
+		DB76E4542488BE4000DC241B /* AuthenticationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDemo.swift; sourceTree = "<group>"; };
 		DBBAB0AC248566E100B13E71 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBAB0AF248566E100B13E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBBAB0B1248566E100B13E71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				DBBAB0C5248636BC00B13E71 /* ComparableDemo.swift */,
 				DBBAB0C72486383D00B13E71 /* DocumentsDirectoryDemo.swift */,
 				DBBAB0C924863C6D00B13E71 /* ViewStatesEnums.swift */,
+				DB76E4522488BDA600DC241B /* MapViewDemo.swift */,
+				DB76E4542488BE4000DC241B /* AuthenticationDemo.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -175,7 +181,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBBAB0CC248785F300B13E71 /* MapView.swift in Sources */,
+				DB76E4552488BE4000DC241B /* AuthenticationDemo.swift in Sources */,
 				DBBAB0C82486383D00B13E71 /* DocumentsDirectoryDemo.swift in Sources */,
+				DB76E4532488BDA600DC241B /* MapViewDemo.swift in Sources */,
 				DBBAB0CA24863C6D00B13E71 /* ViewStatesEnums.swift in Sources */,
 				DBBAB0B0248566E100B13E71 /* AppDelegate.swift in Sources */,
 				DBBAB0C6248636BC00B13E71 /* ComparableDemo.swift in Sources */,
