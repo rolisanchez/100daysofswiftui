@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ViewStatesEnums: View {
-    var loadingState: LoadingState = .loading
+    var loadingState: LoadingStateOld = .loading
 
     var body: some View {
         Group {
@@ -31,7 +31,7 @@ struct ViewStatesEnums_Previews: PreviewProvider {
 }
 
 
-enum LoadingState {
+enum LoadingStateOld {
     case loading, success, failed
 }
 

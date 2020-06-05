@@ -11,12 +11,14 @@ import MapKit
 
 struct MapView: UIViewRepresentable {
 //    typealias UIViewType = MKMapView
+    // MARK: Properties
     @Binding var centerCoordinate: CLLocationCoordinate2D
     @Binding var selectedPlace: MKPointAnnotation?
     @Binding var showingPlaceDetails: Bool
     
     var annotations: [MKPointAnnotation]
 
+    // MARK: Make and Update
     func makeUIView(context: UIViewRepresentableContext<MapView>) -> MKMapView {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
@@ -38,6 +40,7 @@ struct MapView: UIViewRepresentable {
         }
     }
     
+    // MARK: Coordinator
     class Coordinator: NSObject, MKMapViewDelegate {
         var parent: MapView
         
@@ -104,16 +107,5 @@ struct MapView_Previews: PreviewProvider {
     static var previews: some View {
         MapView(centerCoordinate: .constant(MKPointAnnotation.example.coordinate), selectedPlace: .constant(MKPointAnnotation.example), showingPlaceDetails: .constant(false), annotations: [MKPointAnnotation.example])
 
-    }
-}
-
-// Annotation helper for Previews
-extension MKPointAnnotation {
-    static var example: MKPointAnnotation {
-        let annotation = MKPointAnnotation()
-        annotation.title = "London"
-        annotation.subtitle = "Home to the 2012 Summer Olympics."
-        annotation.coordinate = CLLocationCoordinate2D(latitude: 51.5, longitude: -0.13)
-        return annotation
     }
 }
