@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB029BE6248B7C2D0094E9C4 /* MKPointAnnotation-Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB029BE5248B7C2D0094E9C4 /* MKPointAnnotation-Codable.swift */; };
 		DB76E4532488BDA600DC241B /* MapViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76E4522488BDA600DC241B /* MapViewDemo.swift */; };
 		DB76E4552488BE4000DC241B /* AuthenticationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76E4542488BE4000DC241B /* AuthenticationDemo.swift */; };
 		DB76E4842489F44300DC241B /* MKPointAnnotation-ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76E4832489F44300DC241B /* MKPointAnnotation-ObservableObject.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB029BE5248B7C2D0094E9C4 /* MKPointAnnotation-Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-Codable.swift"; sourceTree = "<group>"; };
 		DB76E4522488BDA600DC241B /* MapViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewDemo.swift; sourceTree = "<group>"; };
 		DB76E4542488BE4000DC241B /* AuthenticationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDemo.swift; sourceTree = "<group>"; };
 		DB76E4832489F44300DC241B /* MKPointAnnotation-ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-ObservableObject.swift"; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				DB76E4832489F44300DC241B /* MKPointAnnotation-ObservableObject.swift */,
 				DB76E4872489F4EB00DC241B /* MKPointAnnotation+ExampleExtension.swift */,
+				DB029BE5248B7C2D0094E9C4 /* MKPointAnnotation-Codable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB029BE6248B7C2D0094E9C4 /* MKPointAnnotation-Codable.swift in Sources */,
 				DBBAB0CC248785F300B13E71 /* MapView.swift in Sources */,
 				DB76E48B2489F62400DC241B /* Result.swift in Sources */,
 				DB76E4552488BE4000DC241B /* AuthenticationDemo.swift in Sources */,
