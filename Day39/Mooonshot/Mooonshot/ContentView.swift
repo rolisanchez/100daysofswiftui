@@ -27,7 +27,7 @@ struct ContentView: View {
                         // Same as above:
                         .scaledToFit()
                         .frame(width: 44, height: 44)
-                    
+                        .accessibility(hidden: true)
                     VStack(alignment: .leading) {
                         Text(mission.displayName)
                             .font(.headline)

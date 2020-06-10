@@ -20,7 +20,7 @@ struct AstronautView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: geometry.size.width)
-                    
+                        .accessibility(label: Text("Photo of for \(self.astronaut.name)"))
                     Text(self.astronaut.description)
                         .padding()
                     // Below not needed anymore. This bug was fixed
