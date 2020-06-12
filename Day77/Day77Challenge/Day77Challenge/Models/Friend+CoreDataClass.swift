@@ -2,7 +2,7 @@
 //  Friend+CoreDataClass.swift
 //  Day77Challenge
 //
-//  Created by Victor Rolando Sanchez Jara on 6/11/20.
+//  Created by Victor Rolando Sanchez Jara on 6/12/20.
 //  Copyright © 2020 Victor Rolando Sanchez Jara. All rights reserved.
 //
 //

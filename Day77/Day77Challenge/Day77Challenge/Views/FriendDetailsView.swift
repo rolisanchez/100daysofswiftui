@@ -8,17 +8,34 @@
 
 import SwiftUI
 import CoreData
+import MapKit
 
 struct FriendDetailsView: View {
     // MARK: Properties
     let friend: Friend
     let friendImage: Image
     
+    let centerCoordinate: CLLocationCoordinate2D
+    
+    let selectedPlace:  MKPointAnnotation
+    
     init(friend: Friend) {
         self.friend = friend
         let filename = getDocumentsDirectory().appendingPathComponent(friend.image.uuidString)
+        
         let image = UIImage(contentsOfFile: filename.path)
         friendImage = Image(uiImage: image!)
+        
+        let friendCoordinates = CLLocationCoordinate2D(latitude: friend.latitude, longitude: friend.longitude)
+        centerCoordinate = friendCoordinates
+        
+        let codableAnnotation = CodableMKPointAnnotation()
+        
+        codableAnnotation.coordinate = friendCoordinates
+        codableAnnotation.title = "Met \(friend.name) here!"
+        
+        self.selectedPlace = codableAnnotation
+        
     }
     
     // MARK: Body
@@ -27,8 +44,18 @@ struct FriendDetailsView: View {
             friendImage
                 .resizable()
                 .scaledToFit()
-            Text("Name: \(friend.name)")
+            Text("Name: ")
             .font(.headline)
+            + Text("\(friend.name)")
+            Text("Latitude: \(friend.latitude)")
+                .font(.headline)
+            Text("Longitude: \(friend.longitude)")
+                .font(.headline)
+            
+            Text("Location where you met your friend:")
+            .font(.headline)
+            MapView(centerCoordinate: centerCoordinate, selectedPlace: selectedPlace, annotations: [selectedPlace])
+            
         }
         .navigationBarTitle("Friend Details")
     }

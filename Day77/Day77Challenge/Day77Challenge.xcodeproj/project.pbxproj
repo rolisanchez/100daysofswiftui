@@ -15,12 +15,17 @@
 		DB0A4E922491C5440075001C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB0A4E912491C5440075001C /* Preview Assets.xcassets */; };
 		DB0A4E952491C5440075001C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0A4E932491C5440075001C /* LaunchScreen.storyboard */; };
 		DB0A4EA02491C5440075001C /* Day77ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A4E9F2491C5440075001C /* Day77ChallengeTests.swift */; };
-		DB0A4EAC249218840075001C /* Friend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A4EAA249218840075001C /* Friend+CoreDataClass.swift */; };
-		DB0A4EAD249218840075001C /* Friend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A4EAB249218840075001C /* Friend+CoreDataProperties.swift */; };
 		DB0A4EB124921AE80075001C /* FriendDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A4EB024921AE80075001C /* FriendDetailsView.swift */; };
 		DB0A4EB4249223390075001C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A4EB3249223390075001C /* ImagePicker.swift */; };
 		DB0A4EB62492238B0075001C /* AddFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A4EB52492238B0075001C /* AddFriendView.swift */; };
 		DB0A4EB8249254640075001C /* DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A4EB7249254640075001C /* DocumentsDirectory.swift */; };
+		DBA9B4D42493487300DEDEFD /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA9B4D32493487300DEDEFD /* LocationFetcher.swift */; };
+		DBA9B4D7249348A100DEDEFD /* Friend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA9B4D5249348A100DEDEFD /* Friend+CoreDataClass.swift */; };
+		DBA9B4D8249348A100DEDEFD /* Friend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA9B4D6249348A100DEDEFD /* Friend+CoreDataProperties.swift */; };
+		DBA9B4DA249356FD00DEDEFD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA9B4D9249356FD00DEDEFD /* MapView.swift */; };
+		DBA9B4DC2493577E00DEDEFD /* MKPointAnnotation-ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA9B4DB2493577E00DEDEFD /* MKPointAnnotation-ObservableObject.swift */; };
+		DBA9B4DF249357B200DEDEFD /* MKPointAnnotation+ExampleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA9B4DE249357B200DEDEFD /* MKPointAnnotation+ExampleExtension.swift */; };
+		DBA9B4E1249357D600DEDEFD /* MKPointAnnotation-Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA9B4E0249357D600DEDEFD /* MKPointAnnotation-Codable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,12 +51,17 @@
 		DB0A4E9B2491C5440075001C /* Day77ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Day77ChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0A4E9F2491C5440075001C /* Day77ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day77ChallengeTests.swift; sourceTree = "<group>"; };
 		DB0A4EA12491C5440075001C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB0A4EAA249218840075001C /* Friend+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DB0A4EAB249218840075001C /* Friend+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DB0A4EB024921AE80075001C /* FriendDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailsView.swift; sourceTree = "<group>"; };
 		DB0A4EB3249223390075001C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		DB0A4EB52492238B0075001C /* AddFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendView.swift; sourceTree = "<group>"; };
 		DB0A4EB7249254640075001C /* DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsDirectory.swift; sourceTree = "<group>"; };
+		DBA9B4D32493487300DEDEFD /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
+		DBA9B4D5249348A100DEDEFD /* Friend+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DBA9B4D6249348A100DEDEFD /* Friend+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DBA9B4D9249356FD00DEDEFD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		DBA9B4DB2493577E00DEDEFD /* MKPointAnnotation-ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-ObservableObject.swift"; sourceTree = "<group>"; };
+		DBA9B4DE249357B200DEDEFD /* MKPointAnnotation+ExampleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation+ExampleExtension.swift"; sourceTree = "<group>"; };
+		DBA9B4E0249357D600DEDEFD /* MKPointAnnotation-Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-Codable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,7 @@
 				DB0A4EAF249218930075001C /* Views */,
 				DB0A4EB2249223270075001C /* Controllers */,
 				DB0A4EB92492546B0075001C /* Helpers */,
+				DBA9B4DD2493578500DEDEFD /* Extensions */,
 				DB0A4E8E2491C5440075001C /* Assets.xcassets */,
 				DB0A4E852491C5420075001C /* AppDelegate.swift */,
 				DB0A4E872491C5420075001C /* SceneDelegate.swift */,
@@ -128,8 +139,8 @@
 		DB0A4EAE2492188D0075001C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DB0A4EAA249218840075001C /* Friend+CoreDataClass.swift */,
-				DB0A4EAB249218840075001C /* Friend+CoreDataProperties.swift */,
+				DBA9B4D5249348A100DEDEFD /* Friend+CoreDataClass.swift */,
+				DBA9B4D6249348A100DEDEFD /* Friend+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -140,6 +151,7 @@
 				DB0A4E8C2491C5420075001C /* ContentView.swift */,
 				DB0A4EB024921AE80075001C /* FriendDetailsView.swift */,
 				DB0A4EB52492238B0075001C /* AddFriendView.swift */,
+				DBA9B4D9249356FD00DEDEFD /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				DB0A4EB3249223390075001C /* ImagePicker.swift */,
+				DBA9B4D32493487300DEDEFD /* LocationFetcher.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -158,6 +171,16 @@
 				DB0A4EB7249254640075001C /* DocumentsDirectory.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DBA9B4DD2493578500DEDEFD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DBA9B4DB2493577E00DEDEFD /* MKPointAnnotation-ObservableObject.swift */,
+				DBA9B4DE249357B200DEDEFD /* MKPointAnnotation+ExampleExtension.swift */,
+				DBA9B4E0249357D600DEDEFD /* MKPointAnnotation-Codable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,15 +285,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0A4EB8249254640075001C /* DocumentsDirectory.swift in Sources */,
+				DBA9B4DA249356FD00DEDEFD /* MapView.swift in Sources */,
+				DBA9B4D7249348A100DEDEFD /* Friend+CoreDataClass.swift in Sources */,
+				DBA9B4DC2493577E00DEDEFD /* MKPointAnnotation-ObservableObject.swift in Sources */,
+				DBA9B4D8249348A100DEDEFD /* Friend+CoreDataProperties.swift in Sources */,
 				DB0A4EB62492238B0075001C /* AddFriendView.swift in Sources */,
+				DBA9B4E1249357D600DEDEFD /* MKPointAnnotation-Codable.swift in Sources */,
 				DB0A4EB124921AE80075001C /* FriendDetailsView.swift in Sources */,
 				DB0A4E862491C5420075001C /* AppDelegate.swift in Sources */,
-				DB0A4EAC249218840075001C /* Friend+CoreDataClass.swift in Sources */,
 				DB0A4E8B2491C5420075001C /* Day77Challenge.xcdatamodeld in Sources */,
 				DB0A4E8D2491C5420075001C /* ContentView.swift in Sources */,
 				DB0A4EB4249223390075001C /* ImagePicker.swift in Sources */,
 				DB0A4E882491C5420075001C /* SceneDelegate.swift in Sources */,
-				DB0A4EAD249218840075001C /* Friend+CoreDataProperties.swift in Sources */,
+				DBA9B4DF249357B200DEDEFD /* MKPointAnnotation+ExampleExtension.swift in Sources */,
+				DBA9B4D42493487300DEDEFD /* LocationFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

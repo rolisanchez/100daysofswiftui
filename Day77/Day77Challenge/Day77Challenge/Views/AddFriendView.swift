@@ -28,6 +28,8 @@ struct AddFriendView: View {
     var invalidImage: Bool {
         return image == nil
     }
+    // Location Related
+    let locationFetcher = LocationFetcher()
     
     // MARK: Body
     var body: some View {
@@ -68,6 +70,8 @@ struct AddFriendView: View {
         .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
             ImagePicker(image: self.$inputImage)
         }
+        .onAppear { self.locationFetcher.start() }
+        
     }
     // MARK: Methods
     func loadImage() {
@@ -87,6 +91,14 @@ struct AddFriendView: View {
                 let newFriend = Friend(context: self.moc)
                 newFriend.name = name
                 newFriend.image = imageUUID
+                
+                if let location = self.locationFetcher.lastKnownLocation {
+                    newFriend.latitude = location.latitude
+                    newFriend.longitude = location.longitude
+                } else {
+                    print("Your location is unknown")
+                }
+                
                 try? self.moc.save()
                 self.presentationMode.wrappedValue.dismiss()
             }
