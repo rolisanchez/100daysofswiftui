@@ -15,6 +15,9 @@
 		DBA9B4FB2496188400DEDEFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA9B4F92496188400DEDEFD /* LaunchScreen.storyboard */; };
 		DBA9B50324961D9E00DEDEFD /* DemoCustomValuesEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA9B50224961D9E00DEDEFD /* DemoCustomValuesEnvironment.swift */; };
 		DBA9B5062496235D00DEDEFD /* DemoTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA9B5052496235D00DEDEFD /* DemoTabView.swift */; };
+		DBA9B508249760F800DEDEFD /* ResultDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA9B507249760F800DEDEFD /* ResultDemo.swift */; };
+		DBA9B50A249765D400DEDEFD /* ManPublishObsObjChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA9B509249765D400DEDEFD /* ManPublishObsObjChanges.swift */; };
+		DBA9B50C2497675700DEDEFD /* ImageInterpolationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA9B50B2497675700DEDEFD /* ImageInterpolationDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		DBA9B4FC2496188400DEDEFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBA9B50224961D9E00DEDEFD /* DemoCustomValuesEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCustomValuesEnvironment.swift; sourceTree = "<group>"; };
 		DBA9B5052496235D00DEDEFD /* DemoTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTabView.swift; sourceTree = "<group>"; };
+		DBA9B507249760F800DEDEFD /* ResultDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDemo.swift; sourceTree = "<group>"; };
+		DBA9B509249765D400DEDEFD /* ManPublishObsObjChanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManPublishObsObjChanges.swift; sourceTree = "<group>"; };
+		DBA9B50B2497675700DEDEFD /* ImageInterpolationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInterpolationDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,9 @@
 			children = (
 				DBA9B50224961D9E00DEDEFD /* DemoCustomValuesEnvironment.swift */,
 				DBA9B5052496235D00DEDEFD /* DemoTabView.swift */,
+				DBA9B507249760F800DEDEFD /* ResultDemo.swift */,
+				DBA9B509249765D400DEDEFD /* ManPublishObsObjChanges.swift */,
+				DBA9B50B2497675700DEDEFD /* ImageInterpolationDemo.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -164,7 +173,10 @@
 				DBA9B4F12496188300DEDEFD /* SceneDelegate.swift in Sources */,
 				DBA9B4F32496188300DEDEFD /* ContentView.swift in Sources */,
 				DBA9B5062496235D00DEDEFD /* DemoTabView.swift in Sources */,
+				DBA9B50A249765D400DEDEFD /* ManPublishObsObjChanges.swift in Sources */,
 				DBA9B50324961D9E00DEDEFD /* DemoCustomValuesEnvironment.swift in Sources */,
+				DBA9B508249760F800DEDEFD /* ResultDemo.swift in Sources */,
+				DBA9B50C2497675700DEDEFD /* ImageInterpolationDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
