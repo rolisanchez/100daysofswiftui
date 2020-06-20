@@ -44,16 +44,26 @@ struct ProspectsView: View {
     
     @State private var isShowingScanner = false
 
+    @State private var showingActionSheet = false
+    
+    let randomData = ["Paul Hudson\npaul@hackingwithswift.com", "Zaul Zloberman\ngreatzaul@apple.com"]
     // MARK: Body
     var body: some View {
         NavigationView {
             List {
                 ForEach(filteredProspects) { prospect in
-                    VStack(alignment: .leading) {
-                        Text(prospect.name)
-                            .font(.headline)
-                        Text(prospect.emailAddress)
-                            .foregroundColor(.secondary)
+                    HStack {
+                        if self.filter == .none {
+                            Image(systemName: prospect.isContacted ? "checkmark.circle" : "questionmark.diamond")
+                            // checkmark.circle
+                            //
+                        }
+                        VStack(alignment: .leading) {
+                            Text(prospect.name)
+                                .font(.headline)
+                            Text(prospect.emailAddress)
+                                .foregroundColor(.secondary)
+                        }
                     }
                     .contextMenu {
                         Button(prospect.isContacted ? "Mark Uncontacted" : "Mark Contacted" ) {
@@ -68,7 +78,13 @@ struct ProspectsView: View {
                 }
             }
                 .navigationBarTitle(title)
-                .navigationBarItems(trailing: Button(action: {
+            .navigationBarItems(leading: Button(action: {
+                                    self.showingActionSheet.toggle()
+                                }, label: {
+                                    Image(systemName: "arrow.up.arrow.down.circle")
+                                    Text("Sort")
+                                }),
+                                trailing: Button(action: {
                     self.isShowingScanner = true
 
 //                    let prospect = Prospect()
@@ -80,8 +96,15 @@ struct ProspectsView: View {
                     Text("Scan")
                 })
                 .sheet(isPresented: $isShowingScanner) {
-                    CodeScannerView(codeTypes: [.qr], simulatedData: "Paul Hudson\npaul@hackingwithswift.com", completion: self.handleScan)
+                    CodeScannerView(codeTypes: [.qr], simulatedData: self.randomData.randomElement()!, completion: self.handleScan)
                 }
+            .actionSheet(isPresented: $showingActionSheet) {
+                ActionSheet(title: Text("Sort by"), message: nil, buttons: [
+                    .default(Text("Name")) { self.prospects.sortBy(criteria: .name) },
+                    .default(Text("Email")) { self.prospects.sortBy(criteria: .email) },
+                    .cancel()
+                ])
+            }
         }
     }
     
@@ -141,6 +164,7 @@ struct ProspectsView: View {
         }
 
     }
+    
 }
 
 struct ProspectsView_Previews: PreviewProvider {
