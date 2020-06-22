@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB62CE4224A06F090063B359 /* TimerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB62CE4124A06F090063B359 /* TimerDemo.swift */; };
+		DB62CE4424A084730063B359 /* BackgroundNotificationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB62CE4324A084730063B359 /* BackgroundNotificationDemo.swift */; };
+		DB62CE4624A085550063B359 /* AccesibilityColorDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB62CE4524A085550063B359 /* AccesibilityColorDemo.swift */; };
+		DB62CE4824A087880063B359 /* AccesibilityMotionDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB62CE4724A087880063B359 /* AccesibilityMotionDemo.swift */; };
+		DB62CE4B24A088A00063B359 /* ReduceTransparencyDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB62CE4A24A088A00063B359 /* ReduceTransparencyDemo.swift */; };
 		DB838B97249F31700077D691 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB838B96249F31700077D691 /* AppDelegate.swift */; };
 		DB838B99249F31700077D691 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB838B98249F31700077D691 /* SceneDelegate.swift */; };
 		DB838B9B249F31700077D691 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB838B9A249F31700077D691 /* ContentView.swift */; };
@@ -23,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB62CE4124A06F090063B359 /* TimerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDemo.swift; sourceTree = "<group>"; };
+		DB62CE4324A084730063B359 /* BackgroundNotificationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundNotificationDemo.swift; sourceTree = "<group>"; };
+		DB62CE4524A085550063B359 /* AccesibilityColorDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccesibilityColorDemo.swift; sourceTree = "<group>"; };
+		DB62CE4724A087880063B359 /* AccesibilityMotionDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccesibilityMotionDemo.swift; sourceTree = "<group>"; };
+		DB62CE4A24A088A00063B359 /* ReduceTransparencyDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceTransparencyDemo.swift; sourceTree = "<group>"; };
 		DB838B93249F31700077D691 /* Flashzilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashzilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB838B96249F31700077D691 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB838B98249F31700077D691 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +61,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB62CE4924A0888A0063B359 /* SpecificAccesibilityNeeds */ = {
+			isa = PBXGroup;
+			children = (
+				DB62CE4524A085550063B359 /* AccesibilityColorDemo.swift */,
+				DB62CE4724A087880063B359 /* AccesibilityMotionDemo.swift */,
+				DB62CE4A24A088A00063B359 /* ReduceTransparencyDemo.swift */,
+			);
+			path = SpecificAccesibilityNeeds;
+			sourceTree = "<group>";
+		};
 		DB838B8A249F31700077D691 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +124,9 @@
 				DB838BB6249F40920077D691 /* Gestures */,
 				DB838BB7249F433A0077D691 /* HapticsDemo.swift */,
 				DB838BB9249F45770077D691 /* DisablingInteractivityDemo.swift */,
+				DB62CE4124A06F090063B359 /* TimerDemo.swift */,
+				DB62CE4324A084730063B359 /* BackgroundNotificationDemo.swift */,
+				DB62CE4924A0888A0063B359 /* SpecificAccesibilityNeeds */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -191,14 +214,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB62CE4B24A088A00063B359 /* ReduceTransparencyDemo.swift in Sources */,
+				DB62CE4224A06F090063B359 /* TimerDemo.swift in Sources */,
 				DB838BB1249F3F930077D691 /* RotationGestureDemo.swift in Sources */,
 				DB838BAF249F3F450077D691 /* MagnificationGestureDemo.swift in Sources */,
 				DB838BB3249F3FC80077D691 /* ClashingGestureDemo.swift in Sources */,
 				DB838BAD249F3E810077D691 /* TapGestureDemo.swift in Sources */,
 				DB838B97249F31700077D691 /* AppDelegate.swift in Sources */,
+				DB62CE4624A085550063B359 /* AccesibilityColorDemo.swift in Sources */,
+				DB62CE4424A084730063B359 /* BackgroundNotificationDemo.swift in Sources */,
 				DB838BB5249F402A0077D691 /* SequenceTappingDemo.swift in Sources */,
 				DB838BBA249F45770077D691 /* DisablingInteractivityDemo.swift in Sources */,
 				DB838BB8249F433A0077D691 /* HapticsDemo.swift in Sources */,
+				DB62CE4824A087880063B359 /* AccesibilityMotionDemo.swift in Sources */,
 				DB838B99249F31700077D691 /* SceneDelegate.swift in Sources */,
 				DB838B9B249F31700077D691 /* ContentView.swift in Sources */,
 			);
