@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB1CCBB924A598AC008C02CE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1CCBB824A598AC008C02CE /* SettingsView.swift */; };
 		DB62CE4224A06F090063B359 /* TimerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB62CE4124A06F090063B359 /* TimerDemo.swift */; };
 		DB62CE4424A084730063B359 /* BackgroundNotificationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB62CE4324A084730063B359 /* BackgroundNotificationDemo.swift */; };
 		DB62CE4624A085550063B359 /* AccesibilityColorDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB62CE4524A085550063B359 /* AccesibilityColorDemo.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB1CCBB824A598AC008C02CE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DB62CE4124A06F090063B359 /* TimerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDemo.swift; sourceTree = "<group>"; };
 		DB62CE4324A084730063B359 /* BackgroundNotificationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundNotificationDemo.swift; sourceTree = "<group>"; };
 		DB62CE4524A085550063B359 /* AccesibilityColorDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccesibilityColorDemo.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				DB838B9A249F31700077D691 /* ContentView.swift */,
 				DB62CE5024A1B8210063B359 /* CardView.swift */,
 				DB7E8C8E24A4891000B1911F /* EditCards.swift */,
+				DB1CCBB824A598AC008C02CE /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				DB838B9B249F31700077D691 /* ContentView.swift in Sources */,
 				DB62CE5124A1B8210063B359 /* CardView.swift in Sources */,
 				DB62CE4F24A1B6E90063B359 /* Card.swift in Sources */,
+				DB1CCBB924A598AC008C02CE /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

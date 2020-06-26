@@ -23,6 +23,12 @@ struct ContentView: View {
 
     @State private var showingEditScreen = false
 
+    @State private var feedback = UINotificationFeedbackGenerator()
+    
+    @State private var editing = true
+    
+    @State private var setCardsBack = true
+    
     // MARK: Body
     var body: some View {
         ZStack {
@@ -31,23 +37,36 @@ struct ContentView: View {
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                Text("Time: \(timeRemaining)")
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
+                Group {
+                    Text("Time: ")
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                        +
+                        Text("\(timeRemaining)")
+                            .font(.largeTitle)
+                            .foregroundColor(timeRemaining <= 10 && !differentiateWithoutColor && !accessibilityEnabled ? .red : .white)
+                    }
                     .padding(.horizontal, 20)
                     .padding(.vertical, 5)
                     .background(
                         Capsule()
                             .fill(Color.black)
                             .opacity(0.75)
-                )
+                    )
+                
                 ZStack {
-                    ForEach(0..<cards.count, id: \.self) { index in
-                        CardView(card: self.cards[index]) {
+                    // MARK: TODO: ForEach is not updating when setting new array in putBack // fix with dispathQueue below
+                    ForEach(cards.indices, id: \.self) { index in
+                        CardView(card: self.cards[index], setCardsBack: self.$setCardsBack,
+                         removal: {
                             withAnimation {
                                 self.removeCard(at: index)
                             }
-                        }
+                        }, putBack: {
+                            withAnimation {
+                                self.putBackCard(at: index)
+                            }
+                        })
                         .stacked(at: index, in: self.cards.count)
                         .allowsHitTesting(index == self.cards.count - 1)
                         .accessibility(hidden: index < self.cards.count - 1)
@@ -56,6 +75,7 @@ struct ContentView: View {
                 .allowsHitTesting(timeRemaining > 0)
                 if cards.isEmpty {
                     Button("Start Again", action: resetCards)
+                        .frame(width: 100, height: 44)
                         .padding()
                         .background(Color.white)
                         .foregroundColor(.black)
@@ -64,8 +84,22 @@ struct ContentView: View {
             }
             VStack {
                 HStack {
+                    Button(action: {
+                        self.editing = false
+                        self.showingEditScreen = true
+                    }, label: {
+                        Text("Settings")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(
+                            Capsule()
+                                .fill(Color.black)
+                                .opacity(0.75)
+                        )
+                    })
                     Spacer()
                     Button(action: {
+                        self.editing = true
                         self.showingEditScreen = true
                     }) {
                         Image(systemName: "plus.circle")
@@ -123,6 +157,13 @@ struct ContentView: View {
             if self.timeRemaining > 0 {
                 self.timeRemaining -= 1
             }
+            
+            if self.timeRemaining <= 10 {
+                self.feedback.notificationOccurred(.warning)
+            } else if self.timeRemaining <= 12 {
+                self.feedback.prepare()
+            }
+            
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
             self.isActive = false
@@ -133,7 +174,11 @@ struct ContentView: View {
             }
         }
         .sheet(isPresented: $showingEditScreen, onDismiss: resetCards) {
-            EditCards()
+            if self.editing {
+                EditCards()
+            } else {
+                SettingsView(setCardsBack: self.$setCardsBack)
+            }
         }
         .onAppear(perform: resetCards)
     }
@@ -144,6 +189,19 @@ struct ContentView: View {
         if cards.isEmpty {
             isActive = false
         }
+    }
+    
+    func putBackCard(at index: Int) {
+        guard index >= 0 else { return }
+        print("cards = \(cards)")
+        let card = cards[index]
+        
+        cards.remove(at: index)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.cards.insert(card, at: 0)
+        }
+        
+        print("cards = \(cards)")
     }
     
     func resetCards() {
