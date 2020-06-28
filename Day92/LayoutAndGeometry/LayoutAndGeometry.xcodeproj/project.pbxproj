@@ -16,6 +16,9 @@
 		DBAA701624A7238E005411A2 /* DemoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA701524A7238E005411A2 /* DemoLayout.swift */; };
 		DBAA701824A72E14005411A2 /* AlignmentDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA701724A72E14005411A2 /* AlignmentDemo.swift */; };
 		DBAA701A24A73323005411A2 /* CustomAligmentDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA701924A73323005411A2 /* CustomAligmentDemo.swift */; };
+		DBAA701C24A867BB005411A2 /* AbsolutePositioningDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA701B24A867BB005411A2 /* AbsolutePositioningDemo.swift */; };
+		DBAA701E24A869A8005411A2 /* GeometryReaderDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA701D24A869A8005411A2 /* GeometryReaderDemo.swift */; };
+		DBAA702024A88382005411A2 /* ScrollViewGeomReaderDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA701F24A88382005411A2 /* ScrollViewGeomReaderDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		DBAA701524A7238E005411A2 /* DemoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLayout.swift; sourceTree = "<group>"; };
 		DBAA701724A72E14005411A2 /* AlignmentDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentDemo.swift; sourceTree = "<group>"; };
 		DBAA701924A73323005411A2 /* CustomAligmentDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAligmentDemo.swift; sourceTree = "<group>"; };
+		DBAA701B24A867BB005411A2 /* AbsolutePositioningDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsolutePositioningDemo.swift; sourceTree = "<group>"; };
+		DBAA701D24A869A8005411A2 /* GeometryReaderDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderDemo.swift; sourceTree = "<group>"; };
+		DBAA701F24A88382005411A2 /* ScrollViewGeomReaderDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewGeomReaderDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,9 @@
 				DBAA701524A7238E005411A2 /* DemoLayout.swift */,
 				DBAA701724A72E14005411A2 /* AlignmentDemo.swift */,
 				DBAA701924A73323005411A2 /* CustomAligmentDemo.swift */,
+				DBAA701B24A867BB005411A2 /* AbsolutePositioningDemo.swift */,
+				DBAA701D24A869A8005411A2 /* GeometryReaderDemo.swift */,
+				DBAA701F24A88382005411A2 /* ScrollViewGeomReaderDemo.swift */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -173,10 +182,13 @@
 			files = (
 				DBAA701A24A73323005411A2 /* CustomAligmentDemo.swift in Sources */,
 				DBAA700024A7235A005411A2 /* AppDelegate.swift in Sources */,
+				DBAA702024A88382005411A2 /* ScrollViewGeomReaderDemo.swift in Sources */,
 				DBAA700224A7235A005411A2 /* SceneDelegate.swift in Sources */,
 				DBAA701624A7238E005411A2 /* DemoLayout.swift in Sources */,
 				DBAA701824A72E14005411A2 /* AlignmentDemo.swift in Sources */,
+				DBAA701C24A867BB005411A2 /* AbsolutePositioningDemo.swift in Sources */,
 				DBAA700424A7235A005411A2 /* ContentView.swift in Sources */,
+				DBAA701E24A869A8005411A2 /* GeometryReaderDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
