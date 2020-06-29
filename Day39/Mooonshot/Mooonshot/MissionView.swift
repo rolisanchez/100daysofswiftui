@@ -23,13 +23,16 @@ struct MissionView: View {
     var body: some View {
         GeometryReader { geometry in
             ScrollView(.vertical) {
-                VStack {
-                    Image(self.mission.image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxWidth: geometry.size.width * 0.7)
-                        .padding(.top)
-                        .accessibility(label: Text("Insignia for \(self.mission.displayName)"))
+                VStack(alignment: .center) {
+                    GeometryReader { geo in
+                        Image(self.mission.image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: geometry.size.width * ((geo.frame(in: .global).maxY-200)/100))
+                            .padding(.top)
+                            .accessibility(label: Text("Insignia for \(self.mission.displayName)"))
+                        .position(x: geo.frame(in: .local).midX, y: geo.frame(in: .local).midY)
+                    }
                     Text(self.mission.formattedLaunchDate)
                         .font(.headline)
                     Text(self.mission.description)
@@ -67,6 +70,8 @@ struct MissionView: View {
             }
         }
         .navigationBarTitle(Text(mission.displayName), displayMode: .inline)
+        
+        
     }
     
     init(mission: Mission, missions: [Mission], astronauts: [Astronaut]) {

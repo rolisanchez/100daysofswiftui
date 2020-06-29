@@ -23,31 +23,43 @@ struct ContentView: View {
     // MARK: Body
     var body: some View {
         NavigationView {
-            VStack {
-                TextField("Enter your word", text: $newWord, onCommit: addNewWord)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .autocapitalization(.none)
-                    .padding()
-                List(usedWords, id: \.self) { word in
-                    HStack {
-                        Image(systemName: "\(word.count).circle")
-                        Text(word)
+                VStack {
+                    TextField("Enter your word", text: self.$newWord, onCommit: self.addNewWord)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .autocapitalization(.none)
+                        .padding()
+                     GeometryReader { geoList in
+                        List(self.usedWords, id: \.self) { word in
+                                GeometryReader { geo in
+                                    HStack {
+                                        HStack {
+                                            Image(systemName: "\(word.count).circle")
+                                                .foregroundColor(Color(red: Double(geo.frame(in: .global).maxY / geoList.frame(in: .global).maxY), green: Double(geo.frame(in: .global).maxY / geoList.frame(in: .global).maxY), blue: Double(geo.frame(in: .global).maxY / geoList.frame(in: .global).maxY)))
+                                            Text(word)
+                                        }
+                                        
+                                        .accessibilityElement(children: .ignore)
+                                        .accessibility(label: Text("\(word), \(word.count) letters"))
+                                        Spacer()
+                                        Text("Score: \(self.score)")
+                                        
+                                    }
+                                    .offset(x: geo.frame(in: .global).minY > 500 ? (geo.frame(in: .global).minY - 500)*0.7 : 0)
+                                    
+                            }
+                        }
+                        .navigationBarTitle(self.rootWord)
+                        .navigationBarItems(trailing: Button(action: {
+                            self.startGame()
+                        }) {
+                            Text("Restart")
+                                .font(.title)
+                        })
+                        .onAppear(perform: self.startGame)
+                        .alert(isPresented: self.$showingError) {
+                            Alert(title: Text(self.errorTitle), message: Text(self.errorMessage), dismissButton: .default(Text("OK")))
+                        }
                     }
-                    .accessibilityElement(children: .ignore)
-                    .accessibility(label: Text("\(word), \(word.count) letters"))
-                }
-                Text("Score: \(score)")
-            }
-            .navigationBarTitle(rootWord)
-            .navigationBarItems(trailing: Button(action: {
-                self.startGame()
-            }) {
-                Text("Restart")
-                    .font(.title)
-            })
-            .onAppear(perform: startGame)
-            .alert(isPresented: $showingError) {
-                Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
             }
         }
     }
@@ -110,6 +122,7 @@ struct ContentView: View {
         score += Int((Double(answer.count) * (1/3)).rounded())
         
         usedWords.insert(answer, at: 0)
+
         newWord = ""
         
         
