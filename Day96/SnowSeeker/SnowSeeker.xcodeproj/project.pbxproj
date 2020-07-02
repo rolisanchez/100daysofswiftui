@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB45C6FF24AD7A94006EC854 /* Resort.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB45C6FE24AD7A94006EC854 /* Resort.swift */; };
+		DB45C70224AD7ADF006EC854 /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = DB45C70124AD7ADF006EC854 /* resorts.json */; };
+		DB45C70524AD816A006EC854 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB45C70424AD816A006EC854 /* Bundle-Decodable.swift */; };
+		DB45C70724AD823E006EC854 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB45C70624AD823E006EC854 /* WelcomeView.swift */; };
+		DB45C70924AD942D006EC854 /* ResortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB45C70824AD942D006EC854 /* ResortView.swift */; };
+		DB45C70B24AD9488006EC854 /* SkiDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB45C70A24AD9488006EC854 /* SkiDetailsView.swift */; };
+		DB45C70D24AD967E006EC854 /* ResortDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB45C70C24AD967E006EC854 /* ResortDetailsView.swift */; };
 		DB8560FB24AC2391009F1CD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8560FA24AC2391009F1CD7 /* AppDelegate.swift */; };
 		DB8560FD24AC2391009F1CD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8560FC24AC2391009F1CD7 /* SceneDelegate.swift */; };
 		DB8560FF24AC2391009F1CD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8560FE24AC2391009F1CD7 /* ContentView.swift */; };
@@ -19,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB45C6FE24AD7A94006EC854 /* Resort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resort.swift; sourceTree = "<group>"; };
+		DB45C70124AD7ADF006EC854 /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resorts.json; sourceTree = "<group>"; };
+		DB45C70424AD816A006EC854 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		DB45C70624AD823E006EC854 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		DB45C70824AD942D006EC854 /* ResortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortView.swift; sourceTree = "<group>"; };
+		DB45C70A24AD9488006EC854 /* SkiDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiDetailsView.swift; sourceTree = "<group>"; };
+		DB45C70C24AD967E006EC854 /* ResortDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortDetailsView.swift; sourceTree = "<group>"; };
 		DB8560F724AC2391009F1CD7 /* SnowSeeker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnowSeeker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8560FA24AC2391009F1CD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB8560FC24AC2391009F1CD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +57,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB45C6FD24AD7A87006EC854 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DB45C6FE24AD7A94006EC854 /* Resort.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DB45C70024AD7A9E006EC854 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB45C70124AD7ADF006EC854 /* resorts.json */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB45C70324AD815F006EC854 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DB45C70424AD816A006EC854 /* Bundle-Decodable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DB8560EE24AC2391009F1CD7 = {
 			isa = PBXGroup;
 			children = (
@@ -63,7 +101,10 @@
 			isa = PBXGroup;
 			children = (
 				DB85610F24AC2571009F1CD7 /* Demos */,
+				DB45C6FD24AD7A87006EC854 /* Models */,
 				DB85610E24AC2557009F1CD7 /* Views */,
+				DB45C70324AD815F006EC854 /* Extensions */,
+				DB45C70024AD7A9E006EC854 /* Supporting Files */,
 				DB85610024AC2391009F1CD7 /* Assets.xcassets */,
 				DB8560FA24AC2391009F1CD7 /* AppDelegate.swift */,
 				DB8560FC24AC2391009F1CD7 /* SceneDelegate.swift */,
@@ -86,6 +127,10 @@
 			isa = PBXGroup;
 			children = (
 				DB8560FE24AC2391009F1CD7 /* ContentView.swift */,
+				DB45C70624AD823E006EC854 /* WelcomeView.swift */,
+				DB45C70824AD942D006EC854 /* ResortView.swift */,
+				DB45C70A24AD9488006EC854 /* SkiDetailsView.swift */,
+				DB45C70C24AD967E006EC854 /* ResortDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +205,7 @@
 			files = (
 				DB85610724AC2391009F1CD7 /* LaunchScreen.storyboard in Resources */,
 				DB85610424AC2391009F1CD7 /* Preview Assets.xcassets in Resources */,
+				DB45C70224AD7ADF006EC854 /* resorts.json in Resources */,
 				DB85610124AC2391009F1CD7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,8 +219,14 @@
 			files = (
 				DB8560FB24AC2391009F1CD7 /* AppDelegate.swift in Sources */,
 				DB85611324AC284C009F1CD7 /* AlertSheetOptionalsDemo.swift in Sources */,
+				DB45C6FF24AD7A94006EC854 /* Resort.swift in Sources */,
+				DB45C70524AD816A006EC854 /* Bundle-Decodable.swift in Sources */,
+				DB45C70724AD823E006EC854 /* WelcomeView.swift in Sources */,
 				DB85611124AC257D009F1CD7 /* SideBySideDemo.swift in Sources */,
+				DB45C70D24AD967E006EC854 /* ResortDetailsView.swift in Sources */,
 				DB8560FD24AC2391009F1CD7 /* SceneDelegate.swift in Sources */,
+				DB45C70924AD942D006EC854 /* ResortView.swift in Sources */,
+				DB45C70B24AD9488006EC854 /* SkiDetailsView.swift in Sources */,
 				DB8560FF24AC2391009F1CD7 /* ContentView.swift in Sources */,
 				DB85611524AC28FB009F1CD7 /* GroupsTransparentLayoutDemo.swift in Sources */,
 			);
