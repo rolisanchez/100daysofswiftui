@@ -10,7 +10,13 @@ import SwiftUI
 
 struct ResortView: View {
     // MARK: Properties
+    @Environment(\.horizontalSizeClass) var sizeClass
+    @EnvironmentObject var favorites: Favorites
+
     let resort: Resort
+    
+    @State private var selectedFacility: Facility?
+    
     // MARK: Body
     var body: some View {
         ScrollView {
@@ -20,15 +26,35 @@ struct ResortView: View {
                     .scaledToFit()
                 
                 Group {
+                    // Without checking size classes
+//                    HStack {
+//                        Spacer()
+//                        ResortDetailsView(resort: resort)
+//                        SkiDetailsView(resort: resort)
+//                        Spacer()
+//                    }
+//                    .font(.headline)
+//                    .foregroundColor(.secondary)
+//                    .padding(.top)
+                    
+                    // With checking size classes
                     HStack {
-                        Spacer()
-                        ResortDetailsView(resort: resort)
-                        SkiDetailsView(resort: resort)
-                        Spacer()
+                        if sizeClass == .compact {
+                            Spacer()
+                            VStack { ResortDetailsView(resort: resort) }
+                            VStack { SkiDetailsView(resort: resort) }
+                            Spacer()
+                        } else {
+                            ResortDetailsView(resort: resort)
+                            Spacer().frame(height: 0)
+                            SkiDetailsView(resort: resort)
+                        }
                     }
                     .font(.headline)
                     .foregroundColor(.secondary)
                     .padding(.top)
+                    
+
                     
                     Text(resort.description)
                         .padding(.vertical)
@@ -39,14 +65,52 @@ struct ResortView: View {
                     
 //                    Text(resort.facilities.joined(separator: ", "))
 //                        .padding(.vertical)
-                    // Below is better than above
-                    Text(ListFormatter.localizedString(byJoining: resort.facilities))
-                        .padding(.vertical)
+                    // Below is better than above because uses "and" on the last item
+//                    Text(ListFormatter.localizedString(byJoining: resort.facilities))
+//                        .padding(.vertical)
+                    
+                    // Using icons
+//                    HStack {
+//                        ForEach(resort.facilities, id: \.self) { facility in
+//                            Facility.icon(for: facility)
+//                                .font(.title)
+//                                .onTapGesture {
+//                                    self.selectedFacility = facility
+//                                }
+//                        }
+//                    }
+//                    .padding(.vertical)
+                    
+                    // Using icons and Facility Types
+                    HStack {
+                        ForEach(resort.facilityTypes) { facility in
+                            facility.icon
+                                .font(.title)
+                                .onTapGesture {
+                                    self.selectedFacility = facility
+                            }
+                        }
+                    }
+                    .padding(.vertical)
                 }
                 .padding(.horizontal)
             }
+            
+            Button(favorites.contains(resort) ? "Remove from Favorites" : "Add to Favorites") {
+                if self.favorites.contains(self.resort) {
+                    self.favorites.remove(self.resort)
+                } else {
+                    self.favorites.add(self.resort)
+                }
+            }
+            .padding()
+
         }
         .navigationBarTitle(Text("\(resort.name), \(resort.country)"), displayMode: .inline)
+        .alert(item: $selectedFacility) { facility in
+            facility.alert
+        }
+
     }
     // MARK: Methods
 }

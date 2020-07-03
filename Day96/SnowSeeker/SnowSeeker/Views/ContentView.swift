@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     // MARK: Properties
     let resorts: [Resort] = Bundle.main.decode("resorts.json")
+    @ObservedObject var favorites = Favorites()
 
     // MARK: Body
     var body: some View {
@@ -35,12 +36,22 @@ struct ContentView: View {
                         Text("\(resort.runs) runs")
                             .foregroundColor(.secondary)
                     }
+                    .layoutPriority(1)
+
+                    if self.favorites.contains(resort) {
+                        Spacer()
+                        Image(systemName: "heart.fill")
+                            .accessibility(label: Text("This is a favorite resort"))
+                            .foregroundColor(.red)
+                    }
                 }
             }
             .navigationBarTitle("Resorts")
             
             WelcomeView()
         }
+        .environmentObject(favorites)
+
         // Optional: Extension to Force iPhone 11 Pro Max to behave
         // with stack navigation (not Apple default)
 //        .phoneOnlyStackNavigationView()
