@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DB22471524AED0F200355C55 /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22471424AED0F200355C55 /* Facility.swift */; };
 		DB22471724AED38600355C55 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22471624AED38600355C55 /* Favorites.swift */; };
+		DB22471924AEF0CF00355C55 /* CaseIterable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22471824AEF0CF00355C55 /* CaseIterable+Extensions.swift */; };
 		DB45C6FF24AD7A94006EC854 /* Resort.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB45C6FE24AD7A94006EC854 /* Resort.swift */; };
 		DB45C70224AD7ADF006EC854 /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = DB45C70124AD7ADF006EC854 /* resorts.json */; };
 		DB45C70524AD816A006EC854 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB45C70424AD816A006EC854 /* Bundle-Decodable.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		DB22471424AED0F200355C55 /* Facility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
 		DB22471624AED38600355C55 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		DB22471824AEF0CF00355C55 /* CaseIterable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaseIterable+Extensions.swift"; sourceTree = "<group>"; };
 		DB45C6FE24AD7A94006EC854 /* Resort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resort.swift; sourceTree = "<group>"; };
 		DB45C70124AD7ADF006EC854 /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resorts.json; sourceTree = "<group>"; };
 		DB45C70424AD816A006EC854 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				DB45C70424AD816A006EC854 /* Bundle-Decodable.swift */,
+				DB22471824AEF0CF00355C55 /* CaseIterable+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB22471924AEF0CF00355C55 /* CaseIterable+Extensions.swift in Sources */,
 				DB8560FB24AC2391009F1CD7 /* AppDelegate.swift in Sources */,
 				DB85611324AC284C009F1CD7 /* AlertSheetOptionalsDemo.swift in Sources */,
 				DB45C6FF24AD7A94006EC854 /* Resort.swift in Sources */,

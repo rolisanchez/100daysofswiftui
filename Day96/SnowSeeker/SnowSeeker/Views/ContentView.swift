@@ -8,11 +8,26 @@
 
 import SwiftUI
 
+// For a real challenge, let the user sort and filter the resorts in ContentView.
+// For sorting use default, alphabetical, and country, and
+enum SortType: CaseIterable {
+    case defaultSort, alphabetical, country
+}
+// For filtering let them select country, size, or price.
+
+enum FilterType: CaseIterable {
+    case none, austria, france, italy, us, canada, size, price
+}
+
 struct ContentView: View {
     // MARK: Properties
-    let resorts: [Resort] = Bundle.main.decode("resorts.json")
+    let originalResorts: [Resort] = Bundle.main.decode("resorts.json")
+    @State private var resorts: [Resort] = Bundle.main.decode("resorts.json")
     @ObservedObject var favorites = Favorites()
 
+    @State private var selectedSort: SortType = .defaultSort
+    @State private var selectedFilter: FilterType = .none
+    
     // MARK: Body
     var body: some View {
         NavigationView {
@@ -47,7 +62,11 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle("Resorts")
-            
+            .navigationBarItems(leading: Button(action: setNextFilter, label: {
+                Text("Filter")
+            }), trailing: Button(action: setNextSort, label: {
+                Text("Sort")
+            }))
             WelcomeView()
         }
         .environmentObject(favorites)
@@ -59,11 +78,76 @@ struct ContentView: View {
     }
     
     // MARK: Methods
+    func setNextFilter(){
+        selectedFilter = selectedFilter.next()
+        // Here we call sort first, which will call filter
+        sortResorts()
+    }
+    
+    func filterResorts(){
+        switch selectedFilter {
+            case .none:
+                return
+            case .austria:
+                resorts = resorts.filter {
+                    $0.country == "Austria"
+                }
+            case .france:
+                resorts = resorts.filter {
+                    $0.country == "France"
+                }
+            case .italy:
+                resorts = resorts.filter {
+                    $0.country == "Italy"
+                }
+            case .us:
+                resorts = resorts.filter {
+                    $0.country == "United States"
+                }
+            case .canada:
+                resorts = resorts.filter {
+                    $0.country == "Canada"
+                }
+            case .size:
+                resorts = resorts.filter {
+                    $0.size > 2
+                }
+            case .price:
+                resorts = resorts.filter {
+                    $0.price > 2
+            }
+        }
+    }
+    
+    func setNextSort(){
+        selectedSort = selectedSort.next()
+        sortResorts()
+    }
+    
+    func sortResorts(){
+        switch selectedSort {
+            case .defaultSort:
+                resorts = originalResorts
+                filterResorts()
+            case .alphabetical:
+                resorts.sort { (resort1, resort2) -> Bool in
+                    resort1.name > resort2.name
+                }
+                filterResorts()
+            case .country:
+                resorts.sort { (resort1, resort2) -> Bool in
+                    resort1.country > resort2.country
+                }
+                filterResorts()
+        }
+        //        resorts.sort(by: )
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        
     }
 }
 
